@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d886b438a93762235ecd051230f873dae1b674ce
-ms.sourcegitcommit: 1117342052bce0bbd5a703bd1f763862b9129807
-ms.translationtype: HT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "140682436"
----
 # <a name="dp-900-trainer-lab-mapping"></a>Correspondance du labo d’instructeur DP-900
 
 Ce cours, DP-900 : Principes de base sur les données Microsoft Azure, a un ensemble de labos conçus pour la formation dispensée par un instructeur. 
