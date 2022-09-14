@@ -21,8 +21,8 @@ La première étape de l’utilisation du stockage Azure consiste à approvision
 1. Si ce n’est pas déjà fait, connectez-vous au [portail Azure](https://portal.azure.com?azure-portal=true).
 1. On the Azure portal home page, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Storage account<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Storage account<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 1. Saisissez les valeurs suivantes sur la page **Créer un compte de stockage** :
-    - <bpt id="p1">**</bpt>Subscription<ept id="p1">**</ept>: If you're using a sandbox, select <bpt id="p2">*</bpt>Concierge Subscription<ept id="p2">*</ept>. Otherwise, select your Azure subscription.
-    - **Groupe de ressources** : Si vous utilisez un bac à sable, sélectionnez le groupe de ressources existant (qui a un nom comme *learn-xxxx...* ). Sinon, créez un groupe de ressources avec le nom de votre choix.
+    - **Abonnement**: Sélectionnez votre abonnement Azure.
+    - **Groupe de ressources** : créez un nouveau groupe de ressources portant le nom de votre choix.
     - **Nom du compte de stockage** : entrez un nom unique pour votre compte de stockage en utilisant des lettres minuscules et des chiffres.
     - **Région** : sélectionnez un emplacement disponible.
     - **Niveau de performance** : *Standard*
@@ -48,7 +48,7 @@ Maintenant que vous avez un compte de stockage Azure, vous pouvez créer un cont
 1. Dans la page du navigateur de stockage, sélectionnez **Conteneurs de blobs** et vérifiez que votre conteneur de **données** est répertorié.
 1. Sélectionnez le conteneur de **données** et notez qu’il est vide.
 1. Sélectionnez **&#65291; Ajouter un répertoire** et lisez les informations concernant les dossiers avant de créer un autre répertoire nommé **produits**.
-1. Dans l’Explorateur Stockage, vérifiez que la vue actuelle affiche le contenu du dossier **produits** que vous venez de créer. Notez que les barres de navigation en haut de la page indiquent le chemin **Conteneurs d’objets blob > données > produits**.
+1. Dans le navigateur de stockage, vérifiez que la vue actuelle affiche le contenu du dossier **produits** que vous venez de créer. Notez que les barres de navigation en haut de la page indiquent le chemin **Conteneurs d’objets blob > données > produits**.
 1. Dans les barres de navigation, sélectionnez les **données** à basculer vers le conteneur de **données** et notez qu’elles ne contiennent <u>pas</u> de dossier nommé **produits**.
 
     Folders in blob storage are virtual, and only exist as part of the path of a blob. Since the <bpt id="p1">**</bpt>products<ept id="p1">**</ept> folder contained no blobs, it isn't really there!
@@ -68,11 +68,11 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 
 1. Téléchargez le fichier JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) à partir de `https://aka.ms/product2.json` et enregistrez-le sur votre ordinateur dans le même dossier que celui dans lequel vous avez téléchargé **product1.json** précédemment. vous le téléchargerez dans le stockage Blob ultérieurement.
 1. Dans la page de votre compte de stockage sur le portail Azure, sur le côté gauche, faites défiler jusqu’à la section **Paramètres**, puis sélectionnez **Mise à niveau de Data Lake Gen2**.
-1. Dans la page d’accueil du portail Azure, sélectionnez **&#65291; Créer une ressource** en haut à gauche et recherchez *Compte de stockage*.
+1. In the ****Data Lake Gen2 upgrade**** page, expand and complete each step to upgrade your storage account to enable hierarchical namespace and support Azure Data Lake Storage Gen 2. This may take some time.
 1. Une fois la mise à niveau terminée, dans le volet de gauche, dans la section supérieure, sélectionnez **Navigateur de stockage** et revenez à la racine de votre conteneur d’objets blob **data**, qui contient toujours le dossier **product_data**.
 1. Sélectionnez le dossier **product_data**, puis vérifiez qu’il contient toujours le fichier **product1.json** que vous avez téléchargé précédemment.
 1. Utilisez le bouton **&#10514; Charger** pour ouvrir le panneau **Charger un blob**.
-1. Dans la page **Compte de stockage** qui en résulte, sélectionnez **Créer**.
+1. Dans la page d’accueil du portail Azure, sélectionnez **&#65291; Créer une ressource** en haut à gauche et recherchez *Compte de stockage*.
 1. Fermez le panneau **Charger un blob** s’il est toujours ouvert, puis vérifiez qu’un dossier **product_data** contient maintenant le fichier **product2.json**.
 1. Sur le côté gauche, dans la section **Stockage des données**, sélectionnez **Conteneurs**.
 1. Ouvrez le conteneur de **données** et vérifiez que le dossier **product_data** que vous avez créé est répertorié.
@@ -86,7 +86,7 @@ Azure Files fournit un moyen de créer des partages de fichiers basés sur le cl
 1. Dans la page Portail Azure de votre conteneur de stockage, sur le côté gauche, dans la section **Stockage des données**, sélectionnez **Partages de fichiers**.
 1. Dans la page Partages de fichiers, sélectionnez **&#65291; Partage de fichiers** et ajoutez un nouveau partage de fichiers nommé **fichiers** et de niveau **Transaction optimisée**.
 1. Dans **Partages de fichiers**, ouvrez votre nouveau partage de **fichiers**.
-1. At the top of the page, select <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept>. Then in the <bpt id="p1">**</bpt>Connect<ept id="p1">**</ept> pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
+1. Dans la page **Compte de stockage** qui en résulte, sélectionnez **Créer**.
 1. Fermez le volet **Connecter**, puis fermez la page **fichiers** pour revenir à la page **Partages de fichiers** de votre compte de stockage Azure.
 
 ## <a name="explore-azure-tables"></a>Explorer des tables Azure
