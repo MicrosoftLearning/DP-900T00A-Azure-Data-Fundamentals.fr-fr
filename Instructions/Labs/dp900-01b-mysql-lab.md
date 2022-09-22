@@ -20,9 +20,9 @@ Dans cet exercice, vous allez provisionner une ressource Azure Database pour MyS
 
 1. In the Azure portal, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Azure Database for MySQL<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure Database for MySQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 
-1. Review the Azure Database for MySQL options that are available. Then for <bpt id="p1">**</bpt>Resource type<ept id="p1">**</ept>, select <bpt id="p2">**</bpt>Flexible Server<ept id="p2">**</ept> and select <bpt id="p3">**</bpt>Create<ept id="p3">**</ept>.
+1. Passez en revue les options Azure Database pour MySQL qui sont disponibles, laissez **Type de ressource** tel quel, puis sélectionnez **Créer**.
 
-    ![Capture d’écran des options de déploiement Azure Database pour MySQL](images/mysql-options.png)
+    ![Capture d’écran des options de déploiement d’Azure Database pour MySQL](images/mysql-options.png)
 
 1. Dans la page **Créer une base de données SQL**, entrez les valeurs suivantes :
     - **Abonnement**: Sélectionnez votre abonnement Azure.

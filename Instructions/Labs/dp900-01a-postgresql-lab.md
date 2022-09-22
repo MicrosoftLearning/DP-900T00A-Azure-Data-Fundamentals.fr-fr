@@ -47,6 +47,6 @@ Dans cet exercice, vous allez provisionner une ressource Azure Database pour Pos
 
     ![Capture d’écran du portail Azure montrant la page Azure Database pour PostgreSQL.](images/postgresql-portal.png)
 
-1. Passez en revue les options pour gérer votre ressource Azure Database pour PostgreSQL.
+1. Passez en revue les options pour gérer votre ressource Azure Database pour PostreSQL.
 
-> **Conseil** : Si vous avez fini d’explorer Azure Database pour PostgreSQL, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.
+> **Conseil** : Si vous avez fini d’explorer Azure Database pour PostgreSQL, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.
