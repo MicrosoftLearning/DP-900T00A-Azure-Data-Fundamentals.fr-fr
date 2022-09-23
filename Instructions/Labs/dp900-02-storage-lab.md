@@ -1,10 +1,10 @@
 ---
 lab:
-  title: Explorer le Stockage Azure
+  title: Explorer des données non relationnelles dans Azure avec le Stockage Azure
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Explorer le Stockage Azure
+# <a name="explore-non-relational-data-in-azure-with-azure-storage"></a>Explorer des données non relationnelles dans Azure avec le Stockage Azure
 
 Dans cet exercice, vous allez provisionner un compte Stockage Azure dans votre abonnement Azure et explorer les différentes façons dont vous pouvez l’utiliser pour stocker des données.
 
