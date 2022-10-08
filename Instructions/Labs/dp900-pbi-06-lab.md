@@ -19,11 +19,11 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 Si Microsoft Power BI Desktop n’est pas déjà installé sur votre ordinateur Windows, vous pouvez le télécharger et l’installer gratuitement.
 
 1. Téléchargez le programme d’installation de Power BI Desktop à partir de [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
-1. When the file has downloaded, open it, and use the setup wizard to install Power BI Desktop on your computer. This insatllation may take a few minutes.
+1. Une fois le fichier téléchargé, ouvrez-le et utilisez l’Assistant d’installation pour installer Power BI Desktop sur votre ordinateur. Cette installation peut prendre quelques minutes.
 
 ## <a name="import-data"></a>Importer des données
 
-1. Open Power BI Desktop. The application interface should look similar to this:
+1. Ouvrez Power BI Desktop. L’interface de l’application doit ressembler à ceci :
 
     ![Capture d’écran montrant l’écran d’accueil de Power BI Desktop.](images/power-bi-start.png)
 
@@ -41,7 +41,7 @@ Si Microsoft Power BI Desktop n’est pas déjà installé sur votre ordinateur 
 
 1. Dans la boîte de dialogue Accéder au contenu web, sélectionnez **Se connecter**.
 
-1. Verify that the URL opens a dataset containing customer data, as shown below. Then select <bpt id="p1">**</bpt>Load<ept id="p1">**</ept> to load the data into the data model for your report.
+1. Vérifiez que l’URL ouvre un jeu de données contenant les données client, comme indiqué ci-dessous. Sélectionnez ensuite **Charger** pour charger les données dans le modèle de données de votre rapport.
 
     ![Capture d’écran montrant un jeu de données client affiché dans Power BI.](images/customers.png)
 
@@ -67,7 +67,7 @@ Si Microsoft Power BI Desktop n’est pas déjà installé sur votre ordinateur 
 
 Les trois tables de données que vous avez importées ont été chargées dans un modèle de données que vous allez maintenant explorer et affiner.
 
-1. In Power BI Desktop, on the left-side edge, select the <bpt id="p1">**</bpt>Model<ept id="p1">**</ept> tab, and then arrange the tables in the model so you can see them. You can hide the panes on the right side by using the <bpt id="p1">**</bpt><ph id="ph1">&gt;&gt;</ph><ept id="p1">**</ept> icons:
+1. Dans Power BI Desktop, sur le côté gauche, sélectionnez l’onglet **Modèle**, puis réorganisez les tables dans le modèle afin de les voir. Vous pouvez masquer les volets sur le côté droit à l’aide des icônes **>>** :
 
     ![Capture d’écran montrant l’onglet Modèle dans Power BI.](images/model-tab.png)
 
@@ -77,12 +77,12 @@ Les trois tables de données que vous avez importées ont été chargées dans u
 
     Cette étape permet de s’assurer que les valeurs de chiffre d’affaires sont affichées sous forme de devise dans les visualisations de rapport.
 
-1. In the products table, right-click the <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> field (or open its <bpt id="p2">**</bpt><ph id="ph1">&amp;vellip;</ph><ept id="p2">**</ept> menu) and select <bpt id="p3">**</bpt>Create hierarchy<ept id="p3">**</ept>. This step creates a hierarchy named <bpt id="p1">**</bpt>Category Hierarchy<ept id="p1">**</ept>. You may need to expand or scroll in the <bpt id="p1">**</bpt>products<ept id="p1">**</ept> table to see this - you can also see it in the <bpt id="p2">**</bpt>Fields<ept id="p2">**</ept> pane:
+1. Dans la table products, cliquez avec le bouton droit sur le champ **Catégorie** (ou ouvrez son menu **&vellip;** ) et sélectionnez **Créer une hiérarchie**. Cette étape crée une hiérarchie nommée **Hiérarchie de catégories**. Vous devrez peut-être développer ou faire défiler la table **products** pour voir cette hiérarchie. Vous pouvez également la voir dans le volet **Champs** :
 
     ![Capture d’écran montrant comment ajouter la hiérarchie de catégories dans Power BI.](images/category-hierarchy.png)
 
-1. In the products table, right-click the <bpt id="p1">**</bpt>ProductName<ept id="p1">**</ept> field (or open its <bpt id="p2">**</bpt><ph id="ph1">&amp;vellip;</ph><ept id="p2">**</ept> menu) and select <bpt id="p3">**</bpt>Add to hierarchy<ept id="p3">**</ept><ph id="ph2"> &gt; </ph><bpt id="p4">**</bpt>Category Hierarchy<ept id="p4">**</ept>. This adds the <bpt id="p1">**</bpt>ProductName<ept id="p1">**</ept> field to the hierarchy you created previously.
-1. In the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, right-click <bpt id="p2">**</bpt>Category Hierarchy<ept id="p2">**</ept> (or open its <bpt id="p3">**</bpt>...<ept id="p3">**</ept> menu) and select <bpt id="p4">**</bpt>Rename<ept id="p4">**</ept>. Then rename the hierarchy to <bpt id="p1">**</bpt>Categorized Product<ept id="p1">**</ept>.
+1. Dans la table products, cliquez avec le bouton droit sur le champ **ProductName** (ou ouvrez son menu **&vellip;** ) et sélectionnez **Ajouter à la hiérarchie** > **Hiérarchie de catégories**. Cela ajoute le champ **ProductName** à la hiérarchie que vous avez créée précédemment.
+1. Dans le volet **Champs**, cliquez avec le bouton droit sur **Hiérarchie de catégories** (ou ouvrez son menu **...**) et sélectionnez **Renommer**. Ensuite, renommez la hiérarchie en **Produits par catégorie**.
 
     ![Capture d’écran montrant comment renommer la hiérarchie dans Power BI.](images/rename-hierarchy.png)
 
@@ -95,9 +95,9 @@ Les trois tables de données que vous avez importées ont été chargées dans u
 
 ## <a name="create-a-report"></a>Créer un rapport
 
-Now you're almost ready to create a report. First you need to check some settings to ensure all visualizations are enabled.
+Maintenant, vous êtes presque prêt à créer un rapport. Tout d’abord, vous devez vérifier certains paramètres pour vous assurer que toutes les visualisations sont activées.
 
-1. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, select <bpt id="p2">**</bpt>Options and Settings<ept id="p2">**</ept>. Then select <bpt id="p1">**</bpt>Options<ept id="p1">**</ept>, and in the <bpt id="p2">**</bpt>Security<ept id="p2">**</ept> section, ensure that <bpt id="p3">**</bpt>Use Map and Filled Map visuals<ept id="p3">**</ept> is enabled and select <bpt id="p4">**</bpt>OK<ept id="p4">**</ept>.
+1. Dans le menu **Fichier**, sélectionnez **Options et paramètres**. Sélectionnez ensuite **Options**, puis, dans la section **Sécurité**, assurez-vous que l’option **Utiliser les visuels de carte et de carte remplie** est activée, puis sélectionnez **OK**.
 
     ![Capture d’écran montrant comment définir la propriété Utiliser les visuels Carte et Carte choroplèthe dans PowerBI.](images/set-options.png)
 
@@ -107,42 +107,42 @@ Now you're almost ready to create a report. First you need to check some setting
 
     ![Capture d’écran montrant l’onglet Rapport dans Power BI.](images/report-tab.png)
 
-1. In the ribbon, above the report design surface, select <bpt id="p1">**</bpt>Text Box<ept id="p1">**</ept> and add a text box containing the text <bpt id="p2">**</bpt>Sales Report<ept id="p2">**</ept> to the report. Format the text to make it bold with a font size of 32.
+1. Dans le ruban, au-dessus de l’aire de conception du rapport, sélectionnez **Zone de texte** et ajoutez une zone de texte contenant le texte **Rapport des ventes** au rapport. Formatez le texte pour le mettre en gras avec une taille de police de 32.
 
     ![Capture d’écran montrant comment ajouter une zone de texte dans Power BI.](images/text-box.png)
 
-1. Une fois le fichier téléchargé, ouvrez-le et utilisez l’Assistant d’installation pour installer Power BI Desktop sur votre ordinateur.
+1. Sélectionnez une zone vide dans le rapport pour désélectionner la zone de texte. Ensuite, dans le volet **Champs**, développez **Produits** et sélectionnez le champ **Produits catégorisés**. Cette étape ajoute une table au rapport.
 
     ![Capture d’écran montrant comment ajouter une table de produits classés par catégorie dans un rapport dans Power BI.](images/categorized-products-table.png)
 
-1. Cette installation peut prendre quelques minutes.
+1. Avec la table toujours sélectionnée, dans le volet **Champs**, développez **Commandes** et sélectionnez **Chiffre d’affaires**. Une colonne Chiffre d’affaires est ajoutée à la table. Vous devrez peut-être agrandir la table pour la voir.
 
-    The revenue is formatted as currency, as you specified in the model. However, you didn't specify the number of decimal places, so the values include fractional amounts. It won't matter for the visualizations you're going to create, but you could go back to the <bpt id="p1">**</bpt>Model<ept id="p1">**</ept> or <bpt id="p2">**</bpt>Data<ept id="p2">**</ept> tab and change the decimal places if you wish.
+    Le chiffre d’affaires est mis en forme en tant que devise, comme vous l’avez spécifié dans le modèle. Toutefois, vous n’avez pas spécifié le nombre de décimales, donc les valeurs incluent des montants fractionnaires. Cela n’a pas d’importance pour les visualisations que vous allez créer, mais si vous le souhaitez, vous pouvez revenir à l’onglet **Modèle** ou **Données** et changer le format des décimales.
 
     ![Capture d’écran montrant une table de produits par catégorie avec le chiffre d’affaires dans un rapport.](images/revenue-column.png)
 
-1. With the table still selected, in the <bpt id="p1">**</bpt>Visualizations<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>Stacked column chart<ept id="p2">**</ept> visualization. The table is changed to a column chart showing revenue by category.
+1. La table étant toujours sélectionnée, dans le volet **Visualisations**, sélectionnez la visualisation **Histogramme empilé**. La table est remplacée par un histogramme présentant le chiffre d’affaires par catégorie.
 
     ![Capture d’écran montrant un histogramme empilé des produits par catégorie avec le chiffre d’affaires dans un rapport.](images/stacked-column-chart.png)
 
-1. Ouvrez Power BI Desktop.
+1. Au-dessus de l’histogramme sélectionné, sélectionnez l’icône **&#8595;** pour activer l’exploration. Ensuite, dans le graphique, sélectionnez la deuxième colonne (*Vélos route*) pour explorer et voir le chiffre d’affaires des produits individuels dans cette catégorie. Cette fonctionnalité est possible, car vous avez défini une hiérarchie de catégories et de produits.
 
     ![Capture d’écran montrant un histogramme détaillé des produits d’une catégorie spécifique.](images/drill-down.png)
 
-1. L’interface de l’application doit ressembler à ceci :
-1. Select a blank area of the report, and then in the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>Quantity<ept id="p2">**</ept> field in the <bpt id="p3">**</bpt>orders<ept id="p3">**</ept> table and the <bpt id="p4">**</bpt>Category<ept id="p4">**</ept> field in the <bpt id="p5">**</bpt>products<ept id="p5">**</ept> table. This step results in another column chart showing sales quantity by product category.
+1. Utilisez l’icône **&#x2191;** pour remonter jusqu’au niveau de la catégorie. Sélectionnez ensuite l’icône **(** &#8595; **)** pour désactiver la fonctionnalité d’exploration.
+1. Sélectionnez une zone vide du rapport, puis dans le volet **Champs**, sélectionnez le champ **Quantité** dans la table **orders** et le champ **Catégorie** dans la table **products**. Cette étape crée un autre histogramme présentant la quantité de ventes par catégorie de produit.
 1. Une fois le nouvel histogramme sélectionné, dans le volet **Visualisations**, sélectionnez **Graphique à secteurs**, puis redimensionnez le graphique et positionnez-le en regard de l’histogramme par catégorie.
 
     ![Capture d’écran montrant un graphique à secteurs qui représente la quantité de ventes par catégorie.](images/category-pie-chart.png)
 
-1. Select a blank area of the report, and then in the <bpt id="p1">**</bpt>Fields<ept id="p1">**</ept> pane, select the <bpt id="p2">**</bpt>City<ept id="p2">**</ept> field in the <bpt id="p3">**</bpt>customers<ept id="p3">**</ept> table and then select the <bpt id="p4">**</bpt>Revenue<ept id="p4">**</ept> field in the <bpt id="p5">**</bpt>orders<ept id="p5">**</ept> table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
+1. Sélectionnez une zone vide du rapport, puis dans le volet **Champs**, sélectionnez le champ **Ville** dans la table **customers**, puis sélectionnez le champ **Chiffre d’affaires** dans la table **orders**. Cette étape crée une carte représentant le chiffre d’affaires par ville. Réorganisez et redimensionnez les visualisations au besoin :
 
     ![Capture d’écran montrant une carte qui représente le chiffre d’affaires par ville.](images/revenue-map.png)
 
-1. In the map, note that you can drag, double-click, use a mouse-wheel, or pinch and drag on a touch screen to interact. Then select a specific city, and note that the other visualizations in the report are modified to highlight the data for the selected city.
+1. Sur la carte, vous pouvez faire glisser, double-cliquer, utiliser la molette de la souris ou pincer et faire glisser le pointeur sur un écran tactile pour interagir. Sélectionnez ensuite une ville spécifique et notez que les autres visualisations du rapport sont modifiées pour mettre en surbrillance les données de la ville sélectionnée.
 
     ![Capture d’écran montrant une carte qui représente le chiffre d’affaires par ville, avec des données détaillées pour la ville sélectionnée.](images/selected-data.png)
 
-1. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> menu, select <bpt id="p2">**</bpt>Save<ept id="p2">**</ept>. Then save the file with an appropriate .pbix file name. You can open the file and explore data modeling and visualization further at your leisure.
+1. Dans le menu **File** (Fichier), sélectionnez **Save** (Enregistrer). Enregistrez ensuite le fichier avec un nom de fichier .pbix approprié. Vous pouvez ouvrir le fichier et explorer davantage la modélisation et la visualisation des données à votre convenance.
 
 Si vous avez un abonnement au [service Power BI](https://www.powerbi.com/?azure-portal=true), vous pouvez vous connecter à votre compte et publier le rapport dans un espace de travail Power BI. 

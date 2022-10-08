@@ -18,7 +18,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 Dans cet exercice, vous allez provisionner une ressource Azure Database pour PostgreSQL.
 
-1. In the Azure portal, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Azure Database for PostgreSQL<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure Database for PostgreSQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. Dans le portail Azure, sélectionnez **&#65291; Créer une ressource** en haut à gauche et recherchez *Azure Database pour PostgreSQL*. Dans la page **Azure Database pour PostgreSQL** qui apparaît, sélectionnez **Créer**.
 
 1. Examinez les options Azure Database pour PostgreSQL qui sont disponibles, puis dans la vignette **Serveur flexible**, sélectionnez **Créer**.
 
@@ -43,10 +43,10 @@ Dans cet exercice, vous allez provisionner une ressource Azure Database pour Pos
 
 1. Sélectionnez **Vérifier + créer**, puis **Créer** pour créer votre base de données Azure PostgreSQL.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Attendez la fin du déploiement. Accédez ensuite à la ressource qui a été déployée, qui doit se présenter comme suit :
 
     ![Capture d’écran du portail Azure montrant la page Azure Database pour PostgreSQL.](images/postgresql-portal.png)
 
-1. Passez en revue les options pour gérer votre ressource Azure Database pour PostreSQL.
+1. Passez en revue les options pour gérer votre ressource Azure Database pour PostgreSQL.
 
-> **Conseil** : Si vous avez fini d’explorer Azure Database pour PostgreSQL, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.
+> **Conseil** : Si vous avez fini d’explorer Azure Database pour PostgreSQL, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.
