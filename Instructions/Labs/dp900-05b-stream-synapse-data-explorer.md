@@ -20,7 +20,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 1. Ouvrez le portail Azure à l’adresse [https://portal.azure/com](https://portal.azure.com?azure-portal=true) et connectez-vous avec les informations d'identification associées à votre abonnement Azure.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+    >                 **Remarque** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
 
 1. Dans le portail Azure, sur la **page d'accueil**, utilisez l’icône **&#65291; Créer une ressource** pour créer une ressource.
 1. Recherchez *Azure Synapse Analytics* et créez une ressource **Azure Synapse Analytics** avec les paramètres suivants :
@@ -33,7 +33,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
         - **Nom du compte** : *Créez un nouveau compte avec un nom unique, par exemple « datalake<votre_nom> »*.
         - **Nom du système de fichiers** : *Créez un nouveau système de fichiers avec un nom unique, par exemple « fs<votre_nom> »*.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+    >                 **Remarque** : Un espace de travail Synapse Analytics nécessite deux groupes de ressources dans votre abonnement Azure, à savoir un pour les ressources que vous créez explicitement et un autre pour les ressources managées utilisées par le service. Il nécessite également un compte de stockage Data Lake dans lequel stocker des données, des scripts et d’autres artefacts.
 
 1. Une fois ces détails entrés, sélectionnez **Vérifier + créer**, puis **Créer** pour créer l’espace de travail.
 1. Patientez pendant la création de l’espace de travail. Cette opération peut prendre environ cinq minutes.
@@ -72,7 +72,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
     - **Format de données** : CSV
     - **Ignorer le premier enregistrement** : sélectionné
     - **Mappage** : devices_mapping
-1. Ensure the column data types have been correctly identified as <bpt id="p1">*</bpt>Time (datetime)<ept id="p1">*</ept>, <bpt id="p2">*</bpt>Device (string)<ept id="p2">*</ept>, and <bpt id="p3">*</bpt>Value (long)<ept id="p3">*</ept>). Then select <bpt id="p1">**</bpt>Next: Start Ingestion<ept id="p1">**</ept>.
+1. Vérifiez que les types de données de colonne ont été correctement identifiés comme *Heure (DateHeure)*, *Appareil (chaîne)* et *Valeur (long)*). Sélectionnez ensuite **Suivant : Démarrer l’ingestion**.
 1. Une fois l’ingestion terminée, sélectionnez **Fermer**.
 1. Dans Azure Data Explorer, sous l’onglet **Requête**, assurez-vous que la base de données **iot-data** est sélectionnée, puis, dans le volet requête, entrez la requête suivante.
 
@@ -90,13 +90,13 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
     Si vos résultats correspondent, vous avez correctement créé la table **appareils** à partir des données du fichier.
 
-    > <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>: In this example, you imported a very small amount of batch data from a file, which is fine for the purposes of this exercise. In reality, you can use Data Explorer to analyze much larger volumes of data; and since you enabled stream ingestion, you could also have configured Data Explorer to ingest data into the table from a streaming source such as Azure Event Hubs.
+    >                 **Conseil** : Dans cet exemple, vous avez importé une très petite quantité de données par lot à partir d’un fichier, ce qui est parfait dans le cadre de cet exercice. En réalité, vous pouvez utiliser Data Explorer pour analyser de gros volumes de données ; et étant donné que vous avez activé l’ingestion de flux, vous pouvez également configurer Data Explorer pour ingérer des données dans la table à partir d’une source de diffusion en continu comme Azure Event Hubs.
 
 ## <a name="use-kusto-query-language-to-query-the-table-in-synapse-studio"></a>Utiliser le langage de requête Kusto pour interroger la table dans Synapse Studio
 
 1. Fermez l’onglet du navigateur Azure Data Explorer et revenez à l’onglet contenant Synapse Studio.
-1. On the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, expand the <bpt id="p2">**</bpt>iot-data<ept id="p2">**</ept> database and its <bpt id="p3">**</bpt>Tables<ept id="p3">**</ept> folder. Then in the <bpt id="p1">**</bpt>...<ept id="p1">**</ept> menu for the <bpt id="p2">**</bpt>devices<ept id="p2">**</ept> table, select <bpt id="p3">**</bpt>New KQL Script<ept id="p3">**</ept><ph id="ph1"> &gt; </ph><bpt id="p4">**</bpt>Take 1000 rows<ept id="p4">**</ept>.
-1. Review the generated query and its results. The query should contain the following code:
+1. Sur la page **Données**, développez la base de données **iot-data** et son dossier **Tables**. Ensuite, dans le menu **...** de la table **Appareils** , sélectionnez **Nouveau script KQL** > **Prendre 1 000 lignes**.
+1. Examinez la requête générée et ses résultats. La requête doit contenir le code suivant :
 
     ```kusto
     devices
@@ -112,7 +112,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
     | where Device == 'Dev1'
     ```
 
-1. Select <bpt id="p1">**</bpt>&amp;#9655; Run<ept id="p1">**</ept> to run the query. Then review the results, which should contain only the rows for the <bpt id="p1">*</bpt>Dev1<ept id="p1">*</ept> device.
+1. Sélectionnez **&#9655; Exécuter** pour exécuter la requête. Examinez ensuite les résultats, qui doivent contenir uniquement les lignes de l’appareil *Dev1*.
 
 1. Modifiez la requête de la manière suivante :
 

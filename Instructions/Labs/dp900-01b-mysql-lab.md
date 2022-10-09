@@ -18,11 +18,11 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 Dans cet exercice, vous allez provisionner une ressource Azure Database pour MySQL.
 
-1. In the Azure portal, select <bpt id="p1">**</bpt>&amp;#65291; Create a resource<ept id="p1">**</ept> from the upper left-hand corner and search for <bpt id="p2">*</bpt>Azure Database for MySQL<ept id="p2">*</ept>. Then in the resulting <bpt id="p1">**</bpt>Azure Database for MySQL<ept id="p1">**</ept> page, select <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+1. Dans le portail Azure, sélectionnez **&#65291; Créer une ressource** en haut à gauche et recherchez *Azure Database pour MySQL*. Dans la page **Azure Database pour MySQL** qui apparaît, sélectionnez **Créer**.
 
-1. Passez en revue les options Azure Database pour MySQL qui sont disponibles, laissez **Type de ressource** tel quel, puis sélectionnez **Créer**.
+1. Passez en revue les options Azure Database pour MySQL disponibles. Ensuite, pour **Type de ressource**, sélectionnez **Serveur flexible** et **Créer**.
 
-    ![Capture d’écran des options de déploiement d’Azure Database pour MySQL](images/mysql-options.png)
+    ![Capture d’écran des options de déploiement Azure Database pour MySQL](images/mysql-options.png)
 
 1. Dans la page **Créer une base de données SQL**, entrez les valeurs suivantes :
     - **Abonnement**: Sélectionnez votre abonnement Azure.
@@ -43,7 +43,7 @@ Dans cet exercice, vous allez provisionner une ressource Azure Database pour MyS
 
 1. Sélectionnez **Vérifier + créer**, puis **Créer** pour créer votre base de données Azure MySQL.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed, which should look like this:
+1. Attendez la fin du déploiement. Accédez ensuite à la ressource qui a été déployée, qui doit se présenter comme suit :
 
     ![Capture d’écran du portail Azure montrant la page Azure Database pour MySQL.](images/mysql-portal.png)
 

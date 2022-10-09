@@ -20,7 +20,7 @@ Pour utiliser Azure Synapse Analytics, vous devez provisionner une ressource d�
 
 1. Ouvrez le portail Azure à l’adresse [https://portal.azure.com](https://portal.azure.com?azure-portal=true) et connectez-vous avec les informations d'identification associées à votre abonnement Azure.
 
-    > <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>:  Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
+    >                 **Conseil** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
 
 2. Dans le portail Azure, sur la **page d'accueil**, utilisez l’icône **&#65291; Créer une ressource** pour créer une ressource.
 3. Recherchez *Azure Synapse Analytics* et créez une ressource **Azure Synapse Analytics** avec les paramètres suivants :
@@ -43,7 +43,7 @@ Pour utiliser Azure Synapse Analytics, vous devez provisionner une ressource d�
         - **Nom du compte** : *Créez un nouveau compte avec un nom unique, par exemple « datalake<votre_nom> »*.
         - **Nom du système de fichiers** : *Créez un nouveau système de fichiers avec un nom unique, par exemple « fs<votre_nom> »*.
 
-    > <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
+    >                 **Remarque** : Un espace de travail Synapse Analytics nécessite deux groupes de ressources dans votre abonnement Azure, à savoir un pour les ressources que vous créez explicitement et un autre pour les ressources managées utilisées par le service. Il nécessite également un compte de stockage Data Lake dans lequel stocker des données, des scripts et d’autres artefacts.
 
 4. Une fois ces détails entrés, sélectionnez **Vérifier + créer**, puis **Créer** pour créer l’espace de travail.
 5. Patientez pendant la création de l’espace de travail. Cette opération peut prendre environ cinq minutes.
@@ -57,11 +57,11 @@ Pour utiliser Azure Synapse Analytics, vous devez provisionner une ressource d�
 
 L’une des tâches clés que vous pouvez effectuer avec Azure Synapse Analytics consiste à définir des *pipelines* qui transfèrent (et, le cas échéant, transforment) des données à partir d’un large éventail de sources vers votre espace de travail à des fins d’analyse.
 
-1. Dans Synapse Studio, dans la page **Accueil**, sélectionnez **Ingérer** et choisissez **Tâche de copie intégrée** pour ouvrir l’outil **Copier des données**.
+1. Dans Synapse Studio, sur la **page d’accueil**, sélectionnez **Ingérer** pour ouvrir l’outil **Copier des données**.
 2. Dans l’outil Copier des données, à l’étape **Propriétés**, assurez-vous que les options **Tâche de copie intégrée** et **Exécuter une fois maintenant** sont sélectionnées, puis cliquez sur **Suivant >**.
 3. À l’étape **Source**, dans la sous-étape **Jeu de données**, sélectionnez les paramètres suivants :
     - **Type de source** : Tous
-    - **Connexion** : *créez une connexion et, dans le volet **Service lié** qui s’affiche, sous l’onglet **Fichier**, sélectionnez **HTTP**. Ensuite, poursuivez et créez une connexion à un fichier de données à l’aide des paramètres suivants :*
+    - **Connexion** : *créez une connexion et, dans le volet **Nouvelle connexion** qui s’affiche, sous l’onglet **Fichier**, sélectionnez **HTTP**. Ensuite, poursuivez et créez une connexion à un fichier de données à l’aide des paramètres suivants :*
         - **Nom** : Produits d’AdventureWorks
         - **Description** : Liste de produits via HTTP
         - **Se connecter via un runtime d'intégration** : AutoResolveIntegrationRuntime
@@ -91,7 +91,7 @@ L’une des tâches clés que vous pouvez effectuer avec Azure Synapse Analytics
     - **Comportement de copie** : Aucun
     - **Nombre maximal de connexions simultanées** : *Laisser vide*
     - **Taille de bloc (Mo)** : *Laissez vide*
-9. On the <bpt id="p1">**</bpt>Target<ept id="p1">**</ept> step, in the <bpt id="p2">**</bpt>Configuration<ept id="p2">**</ept> substep, ensure that the following properties are selected. Then select <bpt id="p1">**</bpt>Next &gt;<ept id="p1">**</ept>:
+9. À l’étape **Cible**, dans la sous-étape **Configuration**, assurez-vous que les propriétés suivantes sont sélectionnées. Ensuite, sélectionnez **Suivant >**  :
     - **Format de fichier** : DelimitedText
     - **Séparateur de colonne** : virgule (,)
     - **Délimiteur de lignes** : Saut de ligne (\n)
@@ -108,13 +108,13 @@ L’une des tâches clés que vous pouvez effectuer avec Azure Synapse Analytics
 11. À l’étape **Vérifier et terminer**, à la sous-étape **Vérifier**, lisez le résumé, puis cliquez sur **Suivant >**.
 12. À l’étape **Déploiement**, attendez que le pipeline soit déployé, puis cliquez sur **Terminer**.
 13. Dans Synapse Studio, sélectionnez la page **Superviser**, puis sous l’onglet **Exécutions du pipeline**, attendez que le pipeline **Copier les produits** se termine avec l’état **Réussi** (vous pouvez utiliser le bouton **&#8635; Actualiser** dans la page Exécutions du pipeline pour actualiser l’état).
-14. On the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, select the <bpt id="p2">**</bpt>Linked<ept id="p2">**</ept> tab and expand the <bpt id="p3">**</bpt>Azure Data Lake Storage Gen 2<ept id="p3">**</ept> hierarchy until you see the file storage for your Synapse workspace. Then select the file storage to verify that a file named <bpt id="p1">**</bpt>products.csv<ept id="p1">**</ept> has been copied to this location, as shown here:
+14. Sur la page **Données**, sélectionnez l’onglet **Lié** et développez la hiérarchie **Azure Data Lake Storage Gen 2** jusqu’à ce que le stockage de fichiers de votre espace de travail Synapse s’affiche. Sélectionnez ensuite le stockage de fichiers pour vérifier qu’un fichier nommé **products.csv** a été copié à cet emplacement, comme illustré ici :
 
     ![Image montrant la hiérarchie Azure Data Lake Storage Gen 2 développée dans Synapse Studio, avec le stockage de fichiers pour votre espace de travail Synapse](images/synapse-storage.png)
 
 ## <a name="use-a-sql-pool-to-analyze-data"></a>Utiliser un pool SQL pour analyser des données
 
-Now that you've ingested some data into your workspace, you can use Synapse Analytics to query and analyze it. One of the most common ways to query data is to use SQL, and in Synapse Analytics you can use a <bpt id="p1">*</bpt>SQL pool<ept id="p1">*</ept> to run SQL code.
+Maintenant que vous avez ingéré des données dans votre espace de travail, vous pouvez utiliser Synapse Analytics pour les interroger et les analyser. L’une des méthodes les plus courantes pour interroger des données consiste à utiliser SQL, et dans Synapse Analytics, vous pouvez utiliser un *pool SQL* pour exécuter du code SQL.
 
 1. Dans Synapse Studio, cliquez avec le bouton droit sur le fichier **products.csv** dans le stockage de fichiers de votre espace de travail Synapse, pointez sur **Nouveau script SQL**, puis choisissez **Sélectionner les 100 premières lignes**.
 2. Dans le volet **Script SQL 1** qui s’ouvre, passez en revue le code SQL qui a été généré, et qui doit ressembler à ceci :
@@ -143,7 +143,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
     | 772 | Mountain-100 Silver, 42 | VTT | 3399.9900 |
     | ... | ... | ... | ... |
 
-5. Note the results consist of four columns named C1, C2, C3, and C4; and that the first row in the results contains the names of the data fields. To fix this problem, add a HEADER_ROW = TRUE parameters to the OPENROWSET function as shown here (replacing <bpt id="p1">*</bpt>datalakexx<ept id="p1">*</ept> and <bpt id="p2">*</bpt>fsxx<ept id="p2">*</ept> with the names of your data lake storage account and file system), and then rerun the query:
+5. Notez que les résultats se composent de quatre colonnes nommées C1, C2, C3 et C4, et que la première ligne dans les résultats contient les noms des champs de données. Pour résoudre ce problème, ajoutez des paramètres HEADER_ROW = TRUE à la fonction OPENROWSET comme indiqué ici (en remplaçant *datalakexx* et *fsxx* par les noms de votre compte de stockage de lac de données et du système de fichiers), puis réexécutez la requête :
 
     ```SQL
     SELECT
@@ -188,13 +188,13 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
     | Porte-vélos | 1 |
     | ... | ... |
 
-8. In the <bpt id="p1">**</bpt>Properties<ept id="p1">**</ept> pane for <bpt id="p2">**</bpt>SQL Script 1<ept id="p2">**</ept>, change the <bpt id="p3">**</bpt>Name<ept id="p3">**</ept> to <bpt id="p4">**</bpt>Count Products by Category<ept id="p4">**</ept>. Then in the toolbar, select <bpt id="p1">**</bpt>Publish<ept id="p1">**</ept> to save the script.
+8. Dans le volet **Propriétés** de **Script SQL 1**, remplacez le **Nom** par **Nombre de produits par catégorie**. Ensuite, dans la barre d’outils, sélectionnez **Publier** pour enregistrer le script.
 
 9. Fermez le volet du script **Nombre de produits par catégorie**.
 
 10. Dans Synapse Studio, sélectionnez la page **Développer** et notez que votre script SQL **Nombre de produits par catégorie** y a été enregistré.
 
-11. Select the <bpt id="p1">**</bpt>Count Products by Category<ept id="p1">**</ept> SQL script to reopen it. Then ensure that the script is connected to the <bpt id="p1">**</bpt>Built-in<ept id="p1">**</ept> SQL pool and run it to retrieve the product counts.
+11. Sélectionnez le script SQL **Nombre de produits par catégorie** pour le rouvrir. Assurez-vous ensuite que le script est connecté au pool SQL **Intégré** et exécutez-le pour récupérer les nombres de produits.
 
 12. Dans le volet **Résultats**, sélectionnez la vue **Graphique**, puis sélectionnez les paramètres suivants pour le graphique :
     - **Type de graphique** : Colonne
@@ -212,7 +212,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
 
 ## <a name="use-a-spark-pool-to-analyze-data"></a>Utiliser un pool Spark pour analyser des données
 
-While SQL is a common language for querying structured datasets, many data analysts find languages like Python useful to explore and prepare data for analysis. In Azure Synapse Analytics, you can run Python (and other) code in a <bpt id="p1">*</bpt>Spark pool<ept id="p1">*</ept>; which uses a distributed data processing engine based on Apache Spark.
+Bien que SQL soit un langage courant pour l’interrogation de jeux de données structurés, de nombreux analystes de données trouvent des langages tels que Python utiles pour explorer et préparer les données à des fins d’analyse. Dans Azure Synapse Analytics, vous pouvez exécuter du code Python (entre autres) dans un *pool Spark*, qui utilise un moteur de traitement de données distribué basé sur Apache Spark.
 
 1. Dans Synapse Studio, sélectionnez la page **Gérer**.
 2. Sélectionnez l’onglet **Pools Apache Spark**, puis utilisez l’icône **&#65291; Nouveau** pour créer un pool Spark avec les paramètres suivants :
@@ -222,7 +222,7 @@ While SQL is a common language for querying structured datasets, many data analy
     - **Mise à l’échelle automatique** : Activée
     - **Nombre de nœuds** 3----3
 3. Examinez et créez le pool Spark, puis attendez qu’il se déploie (ce qui peut prendre quelques minutes).
-4. When the Spark pool has been deployed, in Synapse Studio, on the <bpt id="p1">**</bpt>Data<ept id="p1">**</ept> page, browse to the file system for your Synapse workspace. Then right-click <bpt id="p1">**</bpt>products.csv<ept id="p1">**</ept>, point to <bpt id="p2">**</bpt>New notebook<ept id="p2">**</ept>, and select <bpt id="p3">**</bpt>Load to DataFrame<ept id="p3">**</ept>.
+4. Lorsque le pool Spark a été déployé, dans la page **Données** de Synapse Studio, accédez au système de fichiers de votre espace de travail Synapse. Cliquez ensuite avec le bouton droit sur **products.csv**, pointez sur **Nouveau notebook**, puis sélectionnez **Charger dans le dataframe**.
 5. Dans le volet **Notebook 1** qui s’ouvre, dans la liste **Attacher à**, sélectionnez le pool Spark **spark** créé précédemment et assurez-vous que le **Langage** est défini sur **PySpark (Python)**.
 6. Examinez le code dans la première (et unique) cellule du notebook, qui doit se présenter comme suit :
 
@@ -235,7 +235,7 @@ While SQL is a common language for querying structured datasets, many data analy
     display(df.limit(10))
     ```
 
-7.                  **Conseil** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur.
+7.  Sélectionnez **&#9655; Exécuter** à gauche de la cellule de code pour l’exécuter, et attendez les résultats. La première fois que vous exécutez une cellule dans un notebook, le pool Spark démarre. Il peut falloir environ une minute avant que des résultats soient renvoyés.
 
     > **Remarque** : Si une erreur se produit parce que le noyau Python n’est pas encore disponible, réexécutez la cellule.
 
@@ -285,7 +285,7 @@ While SQL is a common language for querying structured datasets, many data analy
     | Roues | 14 |
     | ... | ... |
 
-14. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
+14. Dans la sortie des résultats de la cellule, sélectionnez la vue **Graphique**. Le graphique obtenu doit ressembler à ceci :
 
     ![Image montrant la vue de graphique du nombre de catégories](images/bar-chart.png)
 
