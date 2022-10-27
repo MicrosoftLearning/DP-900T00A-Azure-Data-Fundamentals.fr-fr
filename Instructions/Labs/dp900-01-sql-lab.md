@@ -30,47 +30,48 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
     - **Vous souhaitez utiliser un pool élastique SQL ?**  : *Non*
     - **Calcul + stockage** : Laisser tel quel
     - **Redondance du stockage de sauvegarde** : Sélectionner *Stockage de sauvegarde localement redondant*
+    - Dans la page **Créer une base de données SQL**, sélectionnez **Suivant : Réseau >** , puis dans la page **Réseau**, dans la section **Connectivité réseau**, sélectionnez **Point de terminaison public**.
 
-1. Dans la page **Créer une base de données SQL**, sélectionnez **Suivant : Réseau >** , puis dans la page **Réseau**, dans la section **Connectivité réseau**, sélectionnez **Point de terminaison public**. Sélectionnez ensuite **Oui** pour les deux options de la section **Règles de pare-feu** pour autoriser l’accès à votre serveur de base de données à partir des services Azure et de votre adresse IP cliente actuelle.
-
-1. Sélectionnez **Suivant : Sécurité >** et définissez l’option **Activer Microsoft Defender pour SQL** sur **Pas maintenant**.
+1. Sélectionnez ensuite **Oui** pour les deux options de la section **Règles de pare-feu** pour autoriser l’accès à votre serveur de base de données à partir des services Azure et de votre adresse IP cliente actuelle. Sélectionnez **Suivant : Sécurité >** et définissez l’option **Activer Microsoft Defender pour SQL** sur **Pas maintenant**.
 
 1. Sélectionnez **Suivant : Paramètres supplémentaires >** et, sous l’onglet **Paramètres supplémentaires**, définissez l’option **Utiliser les données existantes** sur **Exemple** (cela crée un exemple de base de données que vous pourrez explorer plus tard).
 
 1. Sélectionnez **Vérifier + créer**, puis **Créer** pour créer votre base de données Azure SQL.
 
-1. Attendez la fin du déploiement. Accédez ensuite à la ressource qui a été déployée, qui doit se présenter comme suit :
+1. Attendez la fin du déploiement.
 
-    ![Capture d’écran du portail Azure, montrant la page SQL Database.](images//sql-database-portal.png)
+1. Accédez ensuite à la ressource qui a été déployée, qui doit se présenter comme suit : Capture d’écran du portail Azure, montrant la page SQL Database.
 
-1. Dans le volet situé à gauche de la page, sélectionnez **Éditeur de requête (préversion)**, puis connectez-vous avec le nom de connexion administrateur et le mot de passe que vous avez spécifiés pour votre serveur.
-    
-    *Si un message d’erreur indiquant que l’adresse IP cliente n’est pas autorisée s’affiche, sélectionnez le lien **Liste d’adresses IP autorisées...** à la fin du message pour autoriser l’accès et réessayez de vous connecter (vous avez ajouté précédemment l’adresse IP cliente de votre propre ordinateur aux règles du pare-feu, mais l’éditeur de requête peut se connecter à partir d’une autre adresse en fonction de votre configuration réseau.)*
+    ![Dans le volet situé à gauche de la page, sélectionnez **Éditeur de requête (préversion)**, puis connectez-vous avec le nom de connexion administrateur et le mot de passe que vous avez spécifiés pour votre serveur.](images//sql-database-portal.png)
+
+1. *Si un message d’erreur indiquant que l’adresse IP cliente n’est pas autorisée s’affiche, sélectionnez le lien **Liste d’adresses IP autorisées...** à la fin du message pour autoriser l’accès et réessayez de vous connecter (vous avez ajouté précédemment l’adresse IP cliente de votre propre ordinateur aux règles du pare-feu, mais l’éditeur de requête peut se connecter à partir d’une autre adresse en fonction de votre configuration réseau.)*
     
     L’éditeur de requête ressemble à ceci :
     
-    ![Capture d’écran du portail Azure, montrant l’éditeur de requête.](images//query-editor.png)
-
-1. Développez le dossier **Tables** pour voir les tables dans la base de données.
+    Capture d’écran du portail Azure, montrant l’éditeur de requête.
+    
+    ![Développez le dossier **Tables** pour voir les tables dans la base de données.](images//query-editor.png)
 
 1. Dans le volet **Requête 1**, entrez le code SQL suivant :
+
+1. Sélectionnez **&#9655; Exécuter** au-dessus de la requête pour l’exécuter et afficher les résultats, lesquels doivent inclure toutes les colonnes de toutes les lignes de la table **SalesLT.Product**, comme illustré ici :
 
     ```sql
     SELECT * FROM SalesLT.Product;
     ```
 
-1. Sélectionnez **&#9655; Exécuter** au-dessus de la requête pour l’exécuter et afficher les résultats, lesquels doivent inclure toutes les colonnes de toutes les lignes de la table **SalesLT.Product**, comme illustré ici :
+1. Capture d’écran du portail Azure, montrant l’éditeur de requête avec les résultats de la requête.
 
-    ![Capture d’écran du portail Azure, montrant l’éditeur de requête avec les résultats de la requête.](images//sql-query-results.png)
+    ![Remplacez l’instruction SELECT par le code suivant, puis sélectionnez **&#9655; Exécuter** pour exécuter la nouvelle requête et voir les résultats (qui incluent uniquement les colonnes **ProductID**, **Name**, **ListPrice** et **ProductCategoryID**) :](images//sql-query-results.png)
 
-1. Remplacez l’instruction SELECT par le code suivant, puis sélectionnez **&#9655; Exécuter** pour exécuter la nouvelle requête et voir les résultats (qui incluent uniquement les colonnes **ProductID**, **Name**, **ListPrice** et **ProductCategoryID**) :
+1. À présent, essayez la requête suivante, qui utilise une instruction JOIN pour obtenir le nom de la catégorie de la table **SalesLT.ProductCategory** :
 
     ```sql
     SELECT ProductID, Name, ListPrice, ProductCategoryID
     FROM SalesLT.Product;
     ```
 
-1. À présent, essayez la requête suivante, qui utilise une instruction JOIN pour obtenir le nom de la catégorie de la table **SalesLT.ProductCategory** :
+1. Fermez le volet de l’éditeur de requête, en ignorant vos modifications.
 
     ```sql
     SELECT p.ProductID, p.Name AS ProductName,
@@ -80,6 +81,6 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
         ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
-1. Fermez le volet de l’éditeur de requête, en ignorant vos modifications.
+1. **Conseil** : Si vous avez fini d’explorer Azure SQL Database, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.
 
-> **Conseil** : Si vous avez fini d’explorer Azure SQL Database, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.
+> <bpt id="p1">**</bpt>Tip<ept id="p1">**</ept>: If you've finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise.
