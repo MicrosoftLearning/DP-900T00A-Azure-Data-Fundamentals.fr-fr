@@ -68,7 +68,7 @@ Le support Azure Data Lake Store Gen2 vous permet d’utiliser des dossiers hié
 
 1. Téléchargez le fichier JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) à partir de `https://aka.ms/product2.json` et enregistrez-le sur votre ordinateur dans le même dossier que celui dans lequel vous avez téléchargé **product1.json** précédemment. vous le téléchargerez dans le stockage Blob ultérieurement.
 1. Dans la page de votre compte de stockage sur le portail Azure, sur le côté gauche, faites défiler jusqu’à la section **Paramètres**, puis sélectionnez **Mise à niveau de Data Lake Gen2**.
-1. Dans la page **Mise à niveau de Data Lake Gen2**, développez et effectuez chaque étape pour mettre à niveau votre compte de stockage afin d’activer l’espace de noms hiérarchique et la prise en charge d’Azure Data Lake Storage Gen 2. Cette opération peut prendre un certain temps.
+1. Dans la page **Mise à niveau de Data Lake Gen2**, développez et effectuez chaque étape pour mettre à niveau votre compte de stockage afin d’activer l’espace de noms hiérarchique et la prise en charge d’Azure Data Lake Storage Gen 2. Cette opération peut prendre un certain temps.
 1. Une fois la mise à niveau terminée, dans le volet de gauche, dans la section supérieure, sélectionnez **Navigateur de stockage** et revenez à la racine de votre conteneur d’objets blob **data**, qui contient toujours le dossier **product_data**.
 1. Sélectionnez le dossier **product_data**, puis vérifiez qu’il contient toujours le fichier **product1.json** que vous avez téléchargé précédemment.
 1. Utilisez le bouton **&#10514; Charger** pour ouvrir le panneau **Charger un blob**.
