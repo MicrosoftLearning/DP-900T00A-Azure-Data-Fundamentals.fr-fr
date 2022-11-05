@@ -15,10 +15,10 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 ## <a name="create-a-cosmos-db-account"></a>Créer un compte Cosmos DB
 
-Pour utiliser Cosmos DB, vous devez provisionner un compte Cosmos DB dans votre abonnement Azure. Dans cet exercice, vous allez provisionner un compte Cosmos DB qui utilise l’API core (SQL).
+Pour utiliser Cosmos DB, vous devez provisionner un compte Cosmos DB dans votre abonnement Azure. Dans cet exercice, vous allez provisionner un compte Cosmos DB qui utilise Azure Cosmos DB for NoSQL.
 
 1. Dans le portail Azure, sélectionnez **+ Créer une ressource** en haut à gauche, puis recherchez *Azure Cosmos DB*.  Dans les résultats, sélectionnez **Azure Cosmos DB**, puis sélectionnez **Créer**.
-1. Dans la vignette **Core (SQL) - Recommandé**, sélectionnez **Créer**.
+1. Dans la vignette **Azure Cosmos DB for NoSQL**, sélectionnez **Créer**.
 1. Entrez les détails suivants, puis sélectionnez **Vérifier + créer** :
     - **Abonnement** : Si vous utilisez un bac à sable, sélectionnez *Abonnement concierge*. Sinon, sélectionnez votre abonnement Azure.
     - **Groupe de ressources** : Si vous utilisez un bac à sable, sélectionnez le groupe de ressources existant (qui a un nom comme *learn-xxxx...* ). Sinon, créez un groupe de ressources avec le nom de votre choix.
@@ -71,6 +71,6 @@ Pour utiliser Cosmos DB, vous devez provisionner un compte Cosmos DB dans votr
 1. Utilisez le bouton **Exécuter la requête** pour exécuter la requête révisée et passer en revue les résultats, ce qui inclut des entités JSON pour tous les éléments avec un champ **address** contenant le texte « Any St ».
 1. Fermez l’éditeur de requête SQL, en ignorant vos modifications.
 
-    Vous avez vu comment créer et interroger des entités JSON dans une base de données Cosmos DB en utilisant l’interface de l’Explorateur de données dans le portail Azure. Dans la vraie vie, un développeur d’applications utiliserait l’un des nombreux kits SDK de langage de programmation pour appeler l’API core (SQL) et utiliser les données de la base de données.
+    Vous avez vu comment créer et interroger des entités JSON dans une base de données Cosmos DB en utilisant l’interface de l’Explorateur de données dans le portail Azure. Dans un scénario réel, un développeur d’applications utilise l’un des nombreux kits SDK spécifiques au langage de programmation pour appeler l’API NoSQL et utiliser les données de la base de données.
 
 > **Conseil** : Si vous avez fini d’explorer Azure Cosmos DB, vous pouvez supprimer le groupe de ressources que vous avez créé dans cet exercice.

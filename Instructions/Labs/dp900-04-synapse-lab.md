@@ -82,16 +82,16 @@ L’une des tâches clés que vous pouvez effectuer avec Azure Synapse Analytics
     - **Délimiteur de lignes** : Saut de ligne (\n)
     - **Première ligne comme en-tête** : Sélectionné
     - **Type de compression** : Aucune
-7. À l’étape **Cible**, dans la sous-étape **Jeu de données**, sélectionnez les paramètres suivants :
-    - **Type de cible** : Azure Data Lake Storage Gen 2
+7. À l’étape **Destination**, dans la sous-étape **Jeu de données**, sélectionnez les paramètres suivants :
+    - **Type de destination** : Azure Data Lake Storage Gen 2
     - **Connexion** : *sélectionnez la connexion existante à votre magasin de lac de données (cela a été créé pour vous lorsque vous avez créé l’espace de travail).*
-8. Une fois la connexion sélectionnée, dans l’étape **Cible/Jeu de données**, vérifiez que les paramètres suivants sont sélectionnés, puis sélectionnez **Suivant >**  :
+8. Une fois la connexion sélectionnée, à l’étape **Destination/Jeu de données**, vérifiez que les paramètres suivants sont sélectionnés, puis sélectionnez **Suivant >**  :
     - **Chemin d’accès du dossier** : *Accédez au dossier dans votre système de fichiers*
     - **Nom du fichier** : products.csv
     - **Comportement de copie** : Aucun
     - **Nombre maximal de connexions simultanées** : *Laisser vide*
     - **Taille de bloc (Mo)** : *Laissez vide*
-9. À l’étape **Cible**, dans la sous-étape **Configuration**, assurez-vous que les propriétés suivantes sont sélectionnées. Ensuite, sélectionnez **Suivant >**  :
+9. À l’étape **Destination**, dans la sous-étape **Configuration**, assurez-vous que les propriétés suivantes sont sélectionnées. Ensuite, sélectionnez **Suivant >**  :
     - **Format de fichier** : DelimitedText
     - **Séparateur de colonne** : virgule (,)
     - **Délimiteur de lignes** : Saut de ligne (\n)
@@ -106,7 +106,7 @@ L’une des tâches clés que vous pouvez effectuer avec Azure Synapse Analytics
     - **Activer la journalisation** : <u>Non</u> sélectionné
     - **Activer le mode de préproduction** : <u>Non</u> sélectionné
 11. À l’étape **Vérifier et terminer**, à la sous-étape **Vérifier**, lisez le résumé, puis cliquez sur **Suivant >**.
-12. À l’étape **Déploiement**, attendez que le pipeline soit déployé, puis cliquez sur **Terminer**.
+12. À la sous-étape **Déploiement**, attendez que le pipeline soit déployé, puis cliquez sur **Terminer**.
 13. Dans Synapse Studio, sélectionnez la page **Superviser**, puis sous l’onglet **Exécutions du pipeline**, attendez que le pipeline **Copier les produits** se termine avec l’état **Réussi** (vous pouvez utiliser le bouton **&#8635; Actualiser** dans la page Exécutions du pipeline pour actualiser l’état).
 14. Sur la page **Données**, sélectionnez l’onglet **Lié** et développez la hiérarchie **Azure Data Lake Storage Gen 2** jusqu’à ce que le stockage de fichiers de votre espace de travail Synapse s’affiche. Sélectionnez ensuite le stockage de fichiers pour vérifier qu’un fichier nommé **products.csv** a été copié à cet emplacement, comme illustré ici :
 
