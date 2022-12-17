@@ -58,9 +58,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
     Si ces trois ressources ne sont pas répertoriées, cliquez sur le bouton **&#8635 ; Actualiser** jusqu’à ce qu’elles apparaissent.
 
-    > **Remarque** : Si vous utilisez le bac à sable d’apprentissage, le groupe de ressources peut également contenir un deuxième *compte Stockage* nommé **cloudshell*xxxxxxxx***, qui est utilisé pour stocker les données d’Azure Cloud Shell que vous avez utilisées pour exécuter le script d’installation.
-
-3. Sélectionnez la tâche Stream Analytics **stream*xxxxxxxxxxxxx*** et affichez les informations sur sa page **Vue d’ensemble**, en notant les détails suivants :
+ 3. Sélectionnez la tâche Stream Analytics **stream*xxxxxxxxxxxxx*** et affichez les informations sur sa page **Vue d’ensemble**, en notant les détails suivants :
     - La tâche comporte une *entrée* nommée **iotinput**, et une *sortie* nommée **bloboutput**. Ils font référence à IoT Hub et au compte Stockage créé par le script d’installation.
     - La tâche comporte une *requête*, qui lit les données à partir de l’entrée **iotinput** et les agrège en comptant le nombre de messages traités toutes les 10 secondes ; elle écrit les résultats dans la sortie **bloboutput**.
 
