@@ -1,10 +1,10 @@
-# <a name="dp-900-trainer-lab-mapping"></a>Correspondance du labo d’instructeur DP-900
+# Correspondance du labo d’instructeur DP-900
 
 Ce cours, DP-900 : Principes de base sur les données Microsoft Azure, a un ensemble de labos conçus pour la formation dispensée par un instructeur. 
 
 > Remarque : Les instructeurs peuvent choisir de demander aux étudiants d’effectuer un ou plusieurs labos sur leur temps en utilisant les exercices des parcours d’apprentissage Learn associés (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
 
-## <a name="dp-900-module-mapping-to-labs"></a>Correspondance entre les modules DP-900 et les labos
+## Correspondance entre les modules DP-900 et les labos
 
 | Module | Laboratoire | Fichier Markdown |
 | --- | --- | --- |

@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-spark-streaming-in-azure-synapse-analytics"></a>Explorer Spark Streaming dans Azure Synapse Analytics
+# Explorer Spark Streaming dans Azure Synapse Analytics
 
 Dans cet exercice, vous utiliserez *Spark Structured Streaming* et des *tableaux delta* dans Azure Synapse Analytics pour traiter des données de diffusion en continu.
 
 Ce labo prend environ **15** minutes.
 
-## <a name="before-you-start"></a>Avant de commencer
+## Avant de commencer
 
 Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dans lequel vous avez un accès administratif.
 
-## <a name="provision-a-synapse-analytics-workspace"></a>Approvisionner un espace de travail Synapse Analytics
+## Approvisionner un espace de travail Synapse Analytics
 
 Pour utiliser Synapse Analytics, vous devez approvisionner une ressource d’espace de travail Synapse Analytics dans votre abonnement Azure.
 
@@ -43,7 +43,7 @@ Pour utiliser Synapse Analytics, vous devez approvisionner une ressource d’esp
 
     ![Synapse Studio](images/synapse-studio.png)
 
-## <a name="create-a-spark-pool"></a>Créer un pool Spark
+## Créer un pool Spark
 
 Pour utiliser Spark pour traiter les données de diffusion en continu, vous devez ajouter un pool Spark à votre espace de travail Azure Synapse.
 
@@ -56,7 +56,7 @@ Pour utiliser Spark pour traiter les données de diffusion en continu, vous deve
     - **Nombre de nœuds** 3----3
 3. Examinez et créez le pool Spark, puis attendez qu’il se déploie (ce qui peut prendre quelques minutes).
 
-## <a name="explore-stream-processing"></a>Explorer le traitement par flux
+## Explorer le traitement par flux
 
 Pour explorer le traitement par flux avec Spark, vous utiliserez un notebook qui contient le code et les notes Python pour vous aider à effectuer un traitement par flux de base avec Spark Structured Streaming et des tableaux delta.
 
@@ -65,7 +65,7 @@ Pour explorer le traitement par flux avec Spark, vous utiliserez un notebook qui
 3. Dans le menu **&#65291;**, sélectionnez **&#8612; Importer**, et sélectionnez le fichier **Structured Streaming and Delta Tables.ipynb** sur votre ordinateur local.
 4. Suivez les instructions du notebook pour l’attacher à votre pool Spark et exécuter les cellules de code qu’il contient afin d’explorer les différentes façons d’utiliser Spark pour le traitement par flux.
 
-## <a name="delete-azure-resources"></a>Supprimer les ressources Azure
+## Supprimer les ressources Azure
 
 >                 **Remarque** : Si vous envisagez d’effectuer d’autres exercices qui utilisent Azure Synapse Analytics, vous pouvez ignorer cette section. Sinon, effectuez les étapes ci-dessous pour éviter des coûts Azure inutiles.
 
