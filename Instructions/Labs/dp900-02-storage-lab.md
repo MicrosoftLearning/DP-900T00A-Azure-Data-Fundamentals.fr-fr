@@ -4,17 +4,17 @@ lab:
   module: Explore Azure Storage for non-relational data
 ---
 
-# <a name="explore-azure-storage"></a>Explorer le Stockage Azure
+# Explorer le Stockage Azure
 
 Dans cet exercice, vous allez provisionner un compte Stockage Azure dans votre abonnement Azure et explorer les différentes façons dont vous pouvez l’utiliser pour stocker des données.
 
 Ce labo prend environ **15** minutes.
 
-## <a name="before-you-start"></a>Avant de commencer
+## Avant de commencer
 
 Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dans lequel vous avez un accès administratif.
 
-## <a name="provision-an-azure-storage-account"></a>Approvisionner un compte de stockage Azure
+## Approvisionner un compte de stockage Azure
 
 La première étape de l’utilisation du stockage Azure consiste à approvisionner un compte stockage Azure dans votre abonnement Azure.
 
@@ -30,10 +30,10 @@ La première étape de l’utilisation du stockage Azure consiste à approvision
 
 1. Sélectionnez **Suivant : avancé >** et examinez les options de configuration avancées. En particulier, notez que vous pouvez ici activer l’espace de noms hiérarchique pour prendre en charge Azure Data Lake Storage Gen2. Laissez cette option **<u>désactivée</u>** (vous l’activerez plus tard), puis sélectionnez **Suivant : Réseau >** pour voir les options réseau de votre compte de stockage.
 1. Sélectionnez **Suivant : Protection des données >** , puis dans la section **Récupération**, <u>dé</u>sélectionnez toutes les options **Activer la suppression réversible...** . Ces options conservent les fichiers supprimés pour la récupération suivante, mais peuvent provoquer des problèmes plus tard lorsque vous activez l’espace de noms hiérarchique.
-1. Passez les pages **Suivant >** restantes sans modifier les paramètres par défaut, puis dans la page **Vérifier + créer**, attendez que vos sélections soient validées et sélectionnez **Créer** pour créer votre compte Stockage Azure.
+1. Passez les pages **Suivant >** restantes sans modifier les paramètres par défaut, puis dans la page **Vérifier**, attendez que vos sélections soient validées et sélectionnez **Créer** pour créer votre compte Stockage Azure.
 1. Attendez la fin du déploiement. Accédez ensuite à la ressource qui a été déployée.
 
-## <a name="explore-blob-storage"></a>Explorer le Stockage Blob
+## Explorer le Stockage Blob
 
 Maintenant que vous avez un compte de stockage Azure, vous pouvez créer un conteneur pour les données blob.
 
@@ -62,7 +62,7 @@ Maintenant que vous avez un compte de stockage Azure, vous pouvez créer un cont
 1. Sélectionnez l’icône **&#x2027;&#x2027;&#x2027;** tout à droite du dossier. Vous voyez qu’elle n’affiche aucune option. Les dossiers dans un conteneur d’objets blob d’un espace de noms plat sont virtuels et ne peuvent pas être gérés.
 1. Utilisez l’icône **X** en haut à droite de la page de **données** pour fermer la page et revenir à la page **Conteneurs**.
 
-## <a name="explore-azure-data-lake-storage-gen2"></a>Explorer Azure Data Lake Storage Gen2
+## Explorer Azure Data Lake Storage Gen2
 
 Le support Azure Data Lake Store Gen2 vous permet d’utiliser des dossiers hiérarchiques pour organiser et gérer l’accès aux blobs. Il vous permet également d’utiliser le Stockage Blob Azure pour héberger des systèmes de fichiers distribués pour les plateformes d’analytique Big Data courantes.
 
@@ -79,7 +79,7 @@ Le support Azure Data Lake Store Gen2 vous permet d’utiliser des dossiers hié
 1. Sélectionnez l’icône **&#x2027;&#x2027;&#x2027;** tout à droite du dossier et notez qu’avec l’espace de noms hiérarchique activé, vous pouvez effectuer des tâches de configuration au niveau du dossier, y compris renommer des dossiers et définir des autorisations.
 1. Utilisez l’icône **X** en haut à droite de la page de **données** pour fermer la page et revenir à la page **Conteneurs**.
 
-## <a name="explore-azure-files"></a>Explorer Azure Files
+## Explorer Azure Files
 
 Azure Files fournit un moyen de créer des partages de fichiers basés sur le cloud.
 
@@ -89,7 +89,7 @@ Azure Files fournit un moyen de créer des partages de fichiers basés sur le cl
 1. En haut de la page, sélectionnez **Connecter**. Ensuite, dans le volet **Connecter**, notez qu’il existe des onglets pour les systèmes d’exploitation communs (Windows, Linux et macOS) qui contiennent des scripts que vous pouvez exécuter pour vous connecter au dossier partagé à partir d’un ordinateur client.
 1. Fermez le volet **Connecter**, puis fermez la page **fichiers** pour revenir à la page **Partages de fichiers** de votre compte de stockage Azure.
 
-## <a name="explore-azure-tables"></a>Explorer des tables Azure
+## Explorer des tables Azure
 
 Les tables Azure fournissent un magasin clé/valeur pour les applications qui doivent stocker des valeurs de données, mais n’ont pas besoin de la totalité des fonctionnalités et de la structure d’une base de données relationnelle.
 
