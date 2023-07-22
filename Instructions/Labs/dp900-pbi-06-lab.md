@@ -4,24 +4,24 @@ lab:
   module: Explore fundamentals of data visualization
 ---
 
-# <a name="explore-fundamentals-of-data-visualization-with-power-bi"></a>Découvrir les notions de base de la visualisation des données avec Power BI
+# Découvrir les notions de base de la visualisation des données avec Power BI
 
 Dans cet exercice, vous allez utiliser Microsoft Power BI Desktop pour créer un modèle de données et un rapport contenant des visualisations de données interactives.
 
 Ce labo prend environ **20** minutes.
 
-## <a name="before-you-start"></a>Avant de commencer
+## Avant de commencer
 
 Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dans lequel vous avez un accès administratif.
 
-### <a name="install-power-bi-desktop"></a>Installer Power BI Desktop
+### Installer Power BI Desktop
 
 Si Microsoft Power BI Desktop n’est pas déjà installé sur votre ordinateur Windows, vous pouvez le télécharger et l’installer gratuitement.
 
 1. Téléchargez le programme d’installation de Power BI Desktop à partir de [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
 1. Une fois le fichier téléchargé, ouvrez-le et utilisez l’Assistant d’installation pour installer Power BI Desktop sur votre ordinateur. Cette installation peut prendre quelques minutes.
 
-## <a name="import-data"></a>Importer des données
+## Importer des données
 
 1. Ouvrez Power BI Desktop. L’interface de l’application doit ressembler à ceci :
 
@@ -63,7 +63,7 @@ Si Microsoft Power BI Desktop n’est pas déjà installé sur votre ordinateur 
     https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/orders.csv
     ```
 
-## <a name="explore-a-data-model"></a>Explorer un modèle de données
+## Explorer un modèle de données
 
 Les trois tables de données que vous avez importées ont été chargées dans un modèle de données que vous allez maintenant explorer et affiner.
 
@@ -86,14 +86,14 @@ Les trois tables de données que vous avez importées ont été chargées dans u
 
     ![Capture d’écran montrant comment renommer la hiérarchie dans Power BI.](images/rename-hierarchy.png)
 
-1. Sur le côté gauche, sélectionnez l’onglet **Données**, puis dans le volet **Champs**, sélectionnez la table **customers**.
+1. Sur le côté gauche, sélectionnez l’onglet **Vue de données**, puis dans le volet **Données**, sélectionnez la table **customers**.
 1. Sélectionnez l’en-tête de colonne **Ville**, puis définissez sa propriété de **Catégorie de données** sur **Ville** :
 
     ![Capture d’écran montrant comment définir une catégorie de données dans Power BI.](images/data-category.png)
 
     Cette étape permet de s’assurer que les valeurs de cette colonne sont interprétées comme des noms de villes, ce qui peut être utile si vous envisagez d’inclure des visualisations de carte.
 
-## <a name="create-a-report"></a>Créer un rapport
+## Créer un rapport
 
 Maintenant, vous êtes presque prêt à créer un rapport. Tout d’abord, vous devez vérifier certains paramètres pour vous assurer que toutes les visualisations sont activées.
 
@@ -103,7 +103,7 @@ Maintenant, vous êtes presque prêt à créer un rapport. Tout d’abord, vous 
 
     Cette propriété vous permet de vous assurer que vous pouvez inclure des visualisations de carte dans les rapports.
 
-1. Sur le côté gauche, sélectionnez l’onglet **Rapport** et affichez l’interface de création de rapport.
+1. Sur le côté gauche, sélectionnez l’onglet **Affichage du rapport** et affichez l’interface de création de rapport.
 
     ![Capture d’écran montrant l’onglet Rapport dans Power BI.](images/report-tab.png)
 
@@ -111,11 +111,11 @@ Maintenant, vous êtes presque prêt à créer un rapport. Tout d’abord, vous 
 
     ![Capture d’écran montrant comment ajouter une zone de texte dans Power BI.](images/text-box.png)
 
-1. Sélectionnez une zone vide dans le rapport pour désélectionner la zone de texte. Ensuite, dans le volet **Champs**, développez **Produits** et sélectionnez le champ **Produits catégorisés**. Cette étape ajoute une table au rapport.
+1. Sélectionnez une zone vide dans le rapport pour désélectionner la zone de texte. Ensuite, dans le volet **Données**, développez **Products** et sélectionnez le champ **Categorized Products**. Cette étape ajoute une table au rapport.
 
     ![Capture d’écran montrant comment ajouter une table de produits classés par catégorie dans un rapport dans Power BI.](images/categorized-products-table.png)
 
-1. Avec la table toujours sélectionnée, dans le volet **Champs**, développez **Commandes** et sélectionnez **Chiffre d’affaires**. Une colonne Chiffre d’affaires est ajoutée à la table. Vous devrez peut-être agrandir la table pour la voir.
+1. Avec la table toujours sélectionnée, dans le volet **Données**, développez **Orders** et sélectionnez **Revenue**. Une colonne Chiffre d’affaires est ajoutée à la table. Vous devrez peut-être agrandir la table pour la voir.
 
     Le chiffre d’affaires est mis en forme en tant que devise, comme vous l’avez spécifié dans le modèle. Toutefois, vous n’avez pas spécifié le nombre de décimales, donc les valeurs incluent des montants fractionnaires. Cela n’a pas d’importance pour les visualisations que vous allez créer, mais si vous le souhaitez, vous pouvez revenir à l’onglet **Modèle** ou **Données** et changer le format des décimales.
 
@@ -125,17 +125,17 @@ Maintenant, vous êtes presque prêt à créer un rapport. Tout d’abord, vous 
 
     ![Capture d’écran montrant un histogramme empilé des produits par catégorie avec le chiffre d’affaires dans un rapport.](images/stacked-column-chart.png)
 
-1. Au-dessus de l’histogramme sélectionné, sélectionnez l’icône **&#8595;** pour activer l’exploration. Ensuite, dans le graphique, sélectionnez la deuxième colonne (*Vélos route*) pour explorer et voir le chiffre d’affaires des produits individuels dans cette catégorie. Cette fonctionnalité est possible, car vous avez défini une hiérarchie de catégories et de produits.
+1. Au-dessus de l’histogramme sélectionné, sélectionnez l’icône **&#8595;** pour activer l’exploration. Ensuite, dans le graphique, sélectionnez la deuxième colonne pour explorer au niveau du détail et voir le chiffre d’affaires des produits individuels dans cette catégorie. Cette fonctionnalité est possible, car vous avez défini une hiérarchie de catégories et de produits.
 
     ![Capture d’écran montrant un histogramme détaillé des produits d’une catégorie spécifique.](images/drill-down.png)
 
 1. Utilisez l’icône **&#x2191;** pour remonter jusqu’au niveau de la catégorie. Sélectionnez ensuite l’icône **(** &#8595; **)** pour désactiver la fonctionnalité d’exploration.
-1. Sélectionnez une zone vide du rapport, puis dans le volet **Champs**, sélectionnez le champ **Quantité** dans la table **orders** et le champ **Catégorie** dans la table **products**. Cette étape crée un autre histogramme présentant la quantité de ventes par catégorie de produit.
+1. Sélectionnez une zone vide du rapport, puis dans le volet **Données**, sélectionnez le champ **Quantity** dans la table **orders** et le champ **Category** dans la table **products**. Cette étape crée un autre histogramme présentant la quantité de ventes par catégorie de produit.
 1. Une fois le nouvel histogramme sélectionné, dans le volet **Visualisations**, sélectionnez **Graphique à secteurs**, puis redimensionnez le graphique et positionnez-le en regard de l’histogramme par catégorie.
 
     ![Capture d’écran montrant un graphique à secteurs qui représente la quantité de ventes par catégorie.](images/category-pie-chart.png)
 
-1. Sélectionnez une zone vide du rapport, puis dans le volet **Champs**, sélectionnez le champ **Ville** dans la table **customers**, puis sélectionnez le champ **Chiffre d’affaires** dans la table **orders**. Cette étape crée une carte représentant le chiffre d’affaires par ville. Réorganisez et redimensionnez les visualisations au besoin :
+1. Sélectionnez une zone vide du rapport, puis dans le volet **Données**, sélectionnez le champ **City** dans la table **customers**, puis sélectionnez le champ **Revenue** dans la table **orders**. Cette étape crée une carte représentant le chiffre d’affaires par ville. Réorganisez et redimensionnez les visualisations au besoin :
 
     ![Capture d’écran montrant une carte qui représente le chiffre d’affaires par ville.](images/revenue-map.png)
 
