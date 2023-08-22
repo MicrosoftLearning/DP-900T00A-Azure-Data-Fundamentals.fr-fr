@@ -21,7 +21,7 @@ Avant d’utiliser des données dans Fabric, créez un espace de travail avec l�
 3. Créez un nouvel espace de travail avec le nom de votre choix et sélectionnez un mode de licence dans la section **Avancé** qui comprend la capacité Fabric (*Essai*, *Premium* ou *Fabric*).
 4. Lorsque votre nouvel espace de travail s’ouvre, il doit être vide.
 
-    ![Capture d’écran d’un espace de travail vide dans Power BI.](./Images/new-workspace.png)
+    ![Capture d’écran d’un espace de travail vide dans Power BI.](./images/new-workspace.png)
 
 ## Créer un lakehouse.
 
@@ -37,7 +37,7 @@ Maintenant que vous disposez d’un espace de travail, il est temps de passer à
 
     Au bout d’une minute environ, un nouveau lakehouse est créé :
 
-    ![Capture d’écran d’un nouveau lakehouse.](./Images/new-lakehouse.png)
+    ![Capture d’écran d’un nouveau lakehouse.](./images/new-lakehouse.png)
 
 3. Affichez le nouveau lakehouse et notez que le volet **Explorateur de lakehouse** à gauche vous permet de parcourir les tables et les fichiers présents dans le lakehouse :
     - Le dossier **Tables** contient des tables que vous pouvez interroger à l’aide de SQL. Les tables d’un lakehouse Microsoft Fabric sont basées sur le format de fichier *Delta Lake* open source, qui est couramment utilisé dans Apache Spark.
@@ -52,7 +52,7 @@ Un moyen simple d’ingérer des données consiste à utiliser une activité **C
 1. Dans la page **Accueil** de votre lakehouse, dans le menu **Obtenir des données**, sélectionnez **Nouveau pipeline de données**, puis créez un pipeline de données nommé **Ingérer des données de ventes**.
 1. Dans l’Assistant **Copie de données**, dans la page **Choisir une source de données**, sélectionnez l’exemple de jeu de données **Retail Data Model from Wide World Importers**.
 
-    ![Capture d’écran de la page Choisir une source de données](./Images/choose-data-source.png)
+    ![Capture d’écran de la page Choisir une source de données](./images/choose-data-source.png)
 
 1. Sélectionnez **Suivant** et affichez les tables de la source de données dans la page **Se connecter à la source de données**.
 1. Sélectionnez la table **dimension_stock_item**, qui contient les données des produits. Sélectionnez ensuite **Suivant** pour accéder à la page **Choisir la destination des données**.
@@ -60,25 +60,25 @@ Un moyen simple d’ingérer des données consiste à utiliser une activité **C
 1. Définissez les options de destination des données suivantes, puis sélectionnez **Suivant** :
     - **Dossier racine** : Tables
     - **Paramètres de chargement** : Charger dans la nouvelle table
-    - **Nom de la table de destination** : dimProduct
+    - **Nom de la table de destination** : dimension_stock_item
     - **Mappages de colonnes** : *Laisser les mappages par défaut tels qu’ils sont*
     - **Activer la partition** : *Non sélectionné*
-1. Dans la page **Vérifier et enregistrer**, vérifiez que l’option **Démarrer immédiatement le transfert de données** est sélectionnée, puis sélectionnez **Enregistrer + exécuter**.
+1. Dans la page **Vérifier + enregistrer**, vérifiez que l’option **Démarrer immédiatement le transfert de données** est sélectionnée, puis sélectionnez **Enregistrer + exécuter**.
 
     Un nouveau pipeline contenant une activité **Copier des données** est créé, comme illustré ici :
 
-    ![Capture d’écran d’un pipeline avec une activité Copier des données.](./Images/copy-data-pipeline.png)
+    ![Capture d’écran d’un pipeline avec une activité Copier des données.](./images/copy-data-pipeline.png)
 
     Lorsque le pipeline commence à s’exécuter, vous pouvez superviser son statut dans le volet **Sortie** sous le concepteur de pipeline. Utilisez l’icône **&#8635;** (*Actualiser*) pour actualiser le statut et attendez qu’il indique une réussite.
 
 1. Dans la barre de menus du hub à gauche, sélectionnez votre lakehouse.
-1. Dans la page **Accueil**, dans le volet **Lakehouse explorer**, développez **Tables** et vérifiez que la table **dimProduct** a été créée.
+1. Dans la page **Accueil**, dans le volet **Lakehouse explorer**, développez **Tables** et vérifiez que la table **dimension_stock_item** a été créée.
 
     > **Remarque** : Si la nouvelle table est répertoriée comme *non identifiée*, utilisez le bouton **Actualiser** dans la barre d’outils du lakehouse pour actualiser la vue.
 
-1. Sélectionnez la table **dimProduct** pour afficher son contenu.
+1. Sélectionnez la table **dimension_stock_item** pour afficher son contenu.
 
-    ![Capture d’écran de la table dimProduct.](./images/dimProduct.png)
+    ![Capture d’écran de la table dimension_stock_item.](./images/dimProduct.png)
 
 ## Interroger des données dans un lakehouse
 
@@ -92,7 +92,7 @@ Maintenant que vous avez ingéré des données dans une table dans le lakehouse,
 
     ```sql
     SELECT Brand, COUNT(StockItemKey) AS Products
-    FROM dimProduct
+    FROM dimension_stock_item
     GROUP BY Brand
     ```
 
@@ -104,22 +104,22 @@ Maintenant que vous avez ingéré des données dans une table dans le lakehouse,
 
 Les lakehouses Microsoft Fabric organisent toutes les tables dans un modèle de données, que vous pouvez utiliser pour créer des visualisations et des rapports.
 
-1. En bas à gauche de la page, sous le volet **Explorer**, sélectionnez l’onglet **Modèle** pour voir le modèle de données des tables du lakehouse (dans le cas présent, il n’y a qu’une seule table).
+1. En bas à gauche de la page, sous le volet **Explorateur**, sélectionnez l’onglet **Modèle** pour voir le modèle de données des tables du lakehouse (dans le cas présent, il n’y a qu’une seule table).
 
     ![Capture d’écran de la page du modèle dans un lakehouse Fabric.](./images/fabric-model.png)
 
 1. Dans la barre d’outils, sélectionnez **Nouveau rapport** pour ouvrir un nouvel onglet de navigateur contenant le concepteur de rapports Power BI.
 1. Dans le concepteur de rapports :
-    1. Dans le volet **Données**, développez la table **dimProduct** et sélectionnez les champs **Brand** et **StockItemKey**.
-    1. Dans le volet **Visualisations**, sélectionnez la visualisation **Graphique à barres empilées** (il s’agit de la première liste). Vérifiez ensuite que l’**Axe Y** contient le champ **Brand** et remplacez l’agrégation dans l’**Axe X** par **Count** afin d’avoir le champ **Count of StockItemKey**.
-    
+    1. Dans le volet **Données**, développez la table **dimension_stock_item** et sélectionnez les champs **Brand** et **StockItemKey**.
+    1. Dans le volet **Visualisations**, sélectionnez la visualisation **Graphique à barres empilées** (il s’agit de la première liste). Vérifiez ensuite que l’**Axe Y** contient le champ **Brand** et remplacez l’agrégation dans l’**Axe X** par **Count** afin d’avoir le champ **Count of StockItemKey**. Enfin, redimensionnez la visualisation dans le canevas de rapport pour remplir l’espace disponible.
+
         ![Capture d’écran d’un rapport Power BI.](./images/fabric-report.png)
 
     > **Conseil** : Vous pouvez utiliser les icônes **>>** pour masquer les volets du concepteur de rapports afin de voir le rapport plus clairement.
 
 1. Dans le menu **Fichier**, sélectionnez **Enregistrer** pour enregistrer le rapport en tant que **Rapport de quantité de marques** dans votre espace de travail Fabric.
 
-    Vous pouvez fermer l’onglet du navigateur contenant le rapport pour revenir à votre lakehouse. Vous trouverez le rapport dans la page de votre espace de travail dans le portail Microsoft Fabric.
+    Maintenant, vous pouvez fermer l’onglet du navigateur contenant le rapport pour revenir à votre lakehouse. Vous trouverez le rapport dans la page de votre espace de travail dans le portail Microsoft Fabric.
 
 ## Nettoyer les ressources
 
