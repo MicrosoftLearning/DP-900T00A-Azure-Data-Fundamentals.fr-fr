@@ -21,7 +21,7 @@ Avant d’utiliser des données dans Fabric, créez un espace de travail avec l�
 3. Créez un nouvel espace de travail avec le nom de votre choix et sélectionnez un mode de licence dans la section **Avancé** qui comprend la capacité Fabric (*Essai*, *Premium* ou *Fabric*).
 4. Lorsque votre nouvel espace de travail s’ouvre, il doit être vide.
 
-    ![Capture d’écran d’un espace de travail vide dans Power BI.](./Images/new-workspace.png)
+    ![Capture d’écran d’un espace de travail vide dans Power BI.](./images/new-workspace.png)
 
 ## Créer une base de données KQL
 
@@ -37,7 +37,7 @@ Maintenant que vous disposez d’un espace de travail, vous pouvez créer une ba
 
     Au bout d’une minute environ, une nouvelle base de données KQL est créée :
 
-    ![Capture d’écran d’une nouvelle base de données KQL.](./Images/kql-database.png)
+    ![Capture d’écran d’une nouvelle base de données KQL.](./images/kql-database.png)
 
     Actuellement, il n’existe aucune table dans la base de données.
 
@@ -50,14 +50,14 @@ Les flux d’événements offrent un moyen évolutif et flexible d’ingérer de
 
     Après un court laps de temps, le concepteur visuel de votre flux d’événements s’affiche.
 
-    ![Capture d’écran du concepteur de flux d’événements.](./Images/eventstream-designer.png)
+    ![Capture d’écran du concepteur de flux d’événements.](./images/eventstream-designer.png)
 
     Le canevas du concepteur visuel montre une source qui se connecte à votre flux d’événements qui, à son tour, est connecté à une destination.
 
 1. Dans le canevas du concepteur, dans la liste **Nouvelle source** de votre source, sélectionnez **Échantillon de données**. Ensuite, dans le volet **Échantillon de données**, spécifiez le nom **taxis** et sélectionnez l’échantillon de données **Yellow Taxi** (qui représente les données collectées relatives aux trajets en taxi). Sélectionnez ensuite **Ajouter**.
 1. Sous le canevas du concepteur, sélectionnez l’onglet **Aperçu des données** pour afficher un aperçu des données en cours de streaming à partir de la source :
 
-    ![Capture d’écran de l’aperçu des données du flux d’événements.](./Images/eventstream-preview.png)
+    ![Capture d’écran de l’aperçu des données du flux d’événements.](./images/eventstream-preview.png)
 
 1. Dans le canevas du concepteur, dans la liste **Nouvelle destination** de votre destination, sélectionnez **Base de données KQL**. Ensuite, dans le volet **Base de données KQL**, spécifiez le nom de destination **taxi-data** et sélectionnez votre espace de travail et votre base de données KQL. Sélectionnez ensuite **Créer et configurer**.
 1. Dans l’Assistant **Ingérer des données**, dans la page **Destination**, sélectionnez **Nouvelle table** et entrez le nom de la table **taxi-data**. Sélectionnez ensuite **Suivant : Source**.
@@ -66,7 +66,7 @@ Les flux d’événements offrent un moyen évolutif et flexible d’ingérer de
 1. Dans la page **Résumé**, attendez que l’ingestion continue soit établie, puis sélectionnez **Fermer**.
 1. Vérifiez que votre flux d’événements terminé ressemble à ceci :
 
-    ![Capture d’écran d’un flux d’événements terminé.](./Images/complete-eventstream.png)
+    ![Capture d’écran d’un flux d’événements terminé.](./images/complete-eventstream.png)
 
 ## Interroger des données en temps réel dans une base de données KQL
 
@@ -75,7 +75,7 @@ Votre flux d’événements remplit en continu une table dans votre base de donn
 1. Dans le hub de menu à gauche, sélectionnez votre base de données KQL (ou sélectionnez votre espace de travail et recherchez-y votre base de données KQL).
 1. Dans le menu **...** de la table **taxi-data** (qui a été créée par votre flux d’événements), sélectionnez **Interroger la table > Données ingérées au cours des dernières 24 heures**.
 
-    ![Capture d’écran du menu Interroger la table dans une base de données KQL.](./Images/kql-query.png)
+    ![Capture d’écran du menu Interroger la table dans une base de données KQL.](./images/kql-query.png)
 
 1. Affichez les résultats de la requête, qui doit être une requête KQL comme suit :
 
@@ -95,7 +95,7 @@ Votre flux d’événements remplit en continu une table dans votre base de donn
     ```
 
 1. Utilisez le bouton **&#9655; Exécuter** pour exécuter la requête et afficher les résultats, qui montrent le nombre de courses de taxi pour chaque heure.
- 
+
 ## Nettoyer les ressources
 
 Si vous avez fini d’explorer l’analytique en temps réel dans Microsoft Fabric, vous pouvez supprimer l’espace de travail que vous avez créé pour cet exercice.
