@@ -4,17 +4,17 @@ lab:
   module: Explore fundamentals of real-time analytics
 ---
 
-# <a name="explore-azure-stream-analytics"></a>Découvrir Azure Stream Analytics
+# Découvrir Azure Stream Analytics
 
 Dans cet exercice, vous allez provisionner un espace de travail Azure Stream Analytics dans votre abonnement Azure et l’utiliser pour traiter un flux de données en temps réel.
 
 Ce labo prend environ **15** minutes.
 
-## <a name="before-you-start"></a>Avant de commencer
+## Avant de commencer
 
 Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dans lequel vous avez un accès administratif.
 
-## <a name="create-azure-resources"></a>Créer des ressources Azure
+## Créer des ressources Azure
 
 1. Connectez-vous à votre abonnement Azure dans le [portail Azure](https://portal.azure.com) en utilisant vos informations d’identification associées.
 
@@ -40,6 +40,8 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
     bash setup.sh
     ```
 
+    > Ignorez les messages d’avertissement concernant les modifications futures et les fonctionnalités expérimentales.
+
     Attendez que le script s’exécute et réalise les actions suivantes :
 
     1. Installe les extensions d’Azure CLI nécessaires pour créer des ressources (*vous pouvez ignorer les avertissements concernant les extensions expérimentales*)
@@ -48,7 +50,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
     1. Crée un *compte de Stockage Azure*, qui sera utilisé pour stocker les données traitées.
     1. Crée une tâche *Azure Stream Analytics*, qui traite les données d’appareil entrantes en temps réel et écrit les résultats dans le compte de stockage.
 
-## <a name="explore-the-azure-resources"></a>Explorer les ressources Azure
+## Explorer les ressources Azure
 
 1. Dans le [Portail Azure](https://portal.azure.com?azure-portal=true) de la page d'accueil, sélectionnez **Groupes de ressources** pour consulter les groupes de ressources de votre abonnement. Cela doit inclure le groupe de ressources **learn*xxxxxxxxxxxxxxxxx...** * identifié par le script d’installation.
 2. Sélectionnez le groupe de ressources **learn*xxxxxxxxxxxxxxxxx...** *, puis examinez les ressources qu’il doit normalement contenir, à savoir :
@@ -58,11 +60,11 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
     Si ces trois ressources ne sont pas répertoriées, cliquez sur le bouton **&#8635 ; Actualiser** jusqu’à ce qu’elles apparaissent.
 
- 3. Sélectionnez la tâche Stream Analytics **stream*xxxxxxxxxxxxx*** et affichez les informations sur sa page **Vue d’ensemble**, en notant les détails suivants :
+3. Sélectionnez la tâche Stream Analytics **stream*xxxxxxxxxxxxx*** et affichez les informations sur sa page **Vue d’ensemble**, en notant les détails suivants :
     - La tâche comporte une *entrée* nommée **iotinput**, et une *sortie* nommée **bloboutput**. Ils font référence à IoT Hub et au compte Stockage créé par le script d’installation.
     - La tâche comporte une *requête*, qui lit les données à partir de l’entrée **iotinput** et les agrège en comptant le nombre de messages traités toutes les 10 secondes ; elle écrit les résultats dans la sortie **bloboutput**.
 
-## <a name="use-the-resources-to-analyze-streaming-data"></a>Utilisez les ressources pour analyser les données de diffusion en continu
+## Utilisez les ressources pour analyser les données de diffusion en continu
 
 1. En haut de la page **Vue d’ensemble** pour la tâche Stream Analytics, sélectionnez le bouton **&#9655; Démarrer**, puis dans le volet **Démarrer la tâche**, sélectionnez **Démarrer** afin de démarrer la tâche.
 2. Attendez la notification indiquant que la tâche de diffusion en continu a démarré avec succès.
