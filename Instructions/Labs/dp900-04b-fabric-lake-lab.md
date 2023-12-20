@@ -10,7 +10,7 @@ Dans cet exercice, vous allez explorer l’ingestion et l’analytique de donné
 
 Ce labo prend environ **25** minutes.
 
-> **Remarque** : Vous aurez besoin d’une licence Microsoft Fabric pour effectuer cet exercice. Consultez [Bien démarrer avec Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) pour plus d’informations sur l’activation d’une licence d’essai Fabric gratuite. Vous aurez besoin pour cela d’un compte *scolaire* ou *professionnel* Microsoft. Si vous n’en avez pas, vous pouvez vous [inscrire à un essai de Microsoft Office 365 E3 ou version ultérieure](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
+> **Remarque** : Vous aurez besoin d’une licence Microsoft Fabric pour effectuer cet exercice. Pour plus d’informations sur l’activation d’une licence d’essai Fabric gratuite, consultez [Bien démarrer avec Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial). Vous aurez besoin pour cela d’un compte *scolaire* ou *professionnel* Microsoft. Si vous n’en avez pas, vous pouvez vous [inscrire à un essai de Microsoft Office 365 E3 ou supérieur](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 
 ## Créer un espace de travail
 
@@ -45,7 +45,7 @@ Maintenant que vous disposez d’un espace de travail, il est temps de passer à
 
     Actuellement, il n’y a pas de tables ou de fichiers dans le lakehouse.
 
-## Réception de données
+## Ingérer des données
 
 Un moyen simple d’ingérer des données consiste à utiliser une activité **Copier des données** dans un pipeline afin d’extraire les données d’une source et de les copier dans un fichier dans le lakehouse.
 
@@ -113,7 +113,7 @@ Les lakehouses Microsoft Fabric organisent toutes les tables dans un modèle de 
     1. Dans le volet **Données**, développez la table **dimension_stock_item** et sélectionnez les champs **Brand** et **StockItemKey**.
     1. Dans le volet **Visualisations**, sélectionnez la visualisation **Graphique à barres empilées** (il s’agit de la première liste). Vérifiez ensuite que l’**Axe Y** contient le champ **Brand** et remplacez l’agrégation dans l’**Axe X** par **Count** afin d’avoir le champ **Count of StockItemKey**. Enfin, redimensionnez la visualisation dans le canevas de rapport pour remplir l’espace disponible.
 
-        ![Capture d’écran d’un rapport Power BI.](./images/fabric-report.png)
+        ![Capture d’écran d’un état Power BI.](./images/fabric-report.png)
 
     > **Conseil** : Vous pouvez utiliser les icônes **>>** pour masquer les volets du concepteur de rapports afin de voir le rapport plus clairement.
 
@@ -126,5 +126,5 @@ Les lakehouses Microsoft Fabric organisent toutes les tables dans un modèle de 
 Si vous avez terminé d’explorer Microsoft Fabric, vous pouvez supprimer l’espace de travail que vous avez créé pour cet exercice.
 
 1. Dans la barre de gauche, sélectionnez l’icône de votre espace de travail pour afficher tous les éléments qu’il contient.
-2. Dans le menu **...** de la barre d’outils, sélectionnez **Paramètres de l’espace de travail**.
+2. Dans le menu  **...** de la barre d’outils, sélectionnez **Paramètres de l’espace de travail**.
 3. Dans la section **Autre**, sélectionnez **Supprimer cet espace de travail**.
