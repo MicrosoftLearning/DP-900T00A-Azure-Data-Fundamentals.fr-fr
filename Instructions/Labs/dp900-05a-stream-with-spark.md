@@ -20,7 +20,7 @@ Pour utiliser Synapse Analytics, vous devez approvisionner une ressource d’esp
 
 1. Ouvrez le [portail Azure](https://portal.azure.com?azure-portal=true) et connectez-vous avec les informations d’identification associées à votre abonnement Azure.
 
-    >                 **Remarque** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
+    > **Remarque** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
 
 2. Dans le portail Azure, sur la **page d'accueil**, utilisez l’icône **&#65291; Créer une ressource** pour créer une ressource.
 3. Recherchez *Azure Synapse Analytics* et créez une ressource **Azure Synapse Analytics** avec les paramètres suivants :
@@ -33,7 +33,7 @@ Pour utiliser Synapse Analytics, vous devez approvisionner une ressource d’esp
         - **Nom du compte** : *Créez un nouveau compte avec un nom unique, par exemple « datalake<votre_nom> »*.
         - **Nom du système de fichiers** : *Créez un nouveau système de fichiers avec un nom unique, par exemple « fs<votre_nom> »*.
 
-    >                 **Remarque** : Un espace de travail Synapse Analytics nécessite deux groupes de ressources dans votre abonnement Azure, à savoir un pour les ressources que vous créez explicitement et un autre pour les ressources managées utilisées par le service. Il nécessite également un compte de stockage Data Lake dans lequel stocker des données, des scripts et d’autres artefacts.
+    > **Remarque** : Un espace de travail Synapse Analytics nécessite deux groupes de ressources dans votre abonnement Azure, à savoir un pour les ressources que vous créez explicitement et un autre pour les ressources managées utilisées par le service. Il nécessite également un compte de stockage Data Lake dans lequel stocker des données, des scripts et d’autres artefacts.
 
 4. Une fois ces détails entrés, sélectionnez **Vérifier + créer**, puis **Créer** pour créer l’espace de travail.
 5. Patientez pendant la création de l’espace de travail. Cette opération peut prendre environ cinq minutes.
@@ -67,7 +67,7 @@ Pour explorer le traitement par flux avec Spark, vous utiliserez un notebook qui
 
 ## Supprimer les ressources Azure
 
->                 **Remarque** : Si vous envisagez d’effectuer d’autres exercices qui utilisent Azure Synapse Analytics, vous pouvez ignorer cette section. Sinon, effectuez les étapes ci-dessous pour éviter des coûts Azure inutiles.
+> **Remarque** : Si vous envisagez d’effectuer d’autres exercices qui utilisent Azure Synapse Analytics, vous pouvez ignorer cette section. Sinon, effectuez les étapes ci-dessous pour éviter des coûts Azure inutiles.
 
 1. Fermez l’onglet de navigateur de Synapse Studio, sans enregistrer les modifications, puis revenez au Portail Azure.
 1. Dans le portail Azure, dans la page **Accueil**, sélectionnez **Groupes de ressources**.
