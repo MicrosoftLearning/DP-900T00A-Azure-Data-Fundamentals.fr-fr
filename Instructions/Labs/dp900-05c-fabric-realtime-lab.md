@@ -35,9 +35,20 @@ Maintenant que vous disposez d’un espace de travail, vous pouvez créer une ba
 
 2. Dans la page d’accueil de l’analytique en temps réel, créez une **base de données KQL** avec le nom de votre choix.
 
-    Au bout d’une minute environ, une nouvelle base de données KQL est créée :
+    ![Capture d’écran de l’éditeur RTA avec Créer une base de données KQL mis en surbrillance.](./images/create-kql-db.png)
+
+   Vous verrez un écran de tableau de bord, puis sélectionnez le bouton Base de données KQL en haut.
 
     ![Capture d’écran d’une nouvelle base de données KQL.](./images/kql-database.png)
+
+    Une fois sélectionné, la boîte de dialogue ***Nouvelle base de données KQL*** s’affiche et vous permet de donner un nom à votre base de données KQL.
+
+    ![Capture d’écran d’une nouvelle boîte de dialogue de nom de base de données KQL.](./images/name-kql-db.png)
+
+   - nommez la base de données, dans ce scénario, nommez-la : `my_kql_db`
+   - cliquez sur ***Créer***
+  
+    Au bout d’une minute environ, une nouvelle base de données KQL est créée :
 
     Actuellement, il n’existe aucune table dans la base de données.
 
@@ -91,7 +102,7 @@ Votre flux d’événements remplit en continu une table dans votre base de donn
     ```kql
     // This query returns the number of taxi pickups per hour
     ['taxi-data']
-    | summarize PickupCount = count() by bin(tpep_pickup_datetime, 1h)
+    | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
 1. Utilisez le bouton **&#9655; Exécuter** pour exécuter la requête et afficher les résultats, qui montrent le nombre de courses de taxi pour chaque heure.
