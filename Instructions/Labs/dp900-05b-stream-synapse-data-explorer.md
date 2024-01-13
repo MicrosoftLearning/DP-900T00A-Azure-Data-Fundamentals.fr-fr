@@ -22,7 +22,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 1. Ouvrez le portail Azure à l’adresse [https://portal.azure/com](https://portal.azure.com?azure-portal=true) et connectez-vous avec les informations d'identification associées à votre abonnement Azure.
 
-    >                 **Remarque** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
+    > **Remarque** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
 
 1. Dans le portail Azure, sur la **page d'accueil**, utilisez l’icône **&#65291; Créer une ressource** pour créer une ressource.
 1. Recherchez *Azure Synapse Analytics* et créez une ressource **Azure Synapse Analytics** avec les paramètres suivants :
@@ -35,7 +35,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
         - **Nom du compte** : *Créez un nouveau compte avec un nom unique, par exemple « datalake<votre_nom> »*.
         - **Nom du système de fichiers** : *Créez un nouveau système de fichiers avec un nom unique, par exemple « fs<votre_nom> »*.
 
-    >                 **Remarque** : Un espace de travail Synapse Analytics nécessite deux groupes de ressources dans votre abonnement Azure, à savoir un pour les ressources que vous créez explicitement et un autre pour les ressources managées utilisées par le service. Il nécessite également un compte de stockage Data Lake dans lequel stocker des données, des scripts et d’autres artefacts.
+    > **Remarque** : Un espace de travail Synapse Analytics nécessite deux groupes de ressources dans votre abonnement Azure, à savoir un pour les ressources que vous créez explicitement et un autre pour les ressources managées utilisées par le service. Il nécessite également un compte de stockage Data Lake dans lequel stocker des données, des scripts et d’autres artefacts.
 
 1. Une fois ces détails entrés, sélectionnez **Vérifier + créer**, puis **Créer** pour créer l’espace de travail.
 1. Patientez pendant la création de l’espace de travail. Cette opération peut prendre environ cinq minutes.
@@ -92,7 +92,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
     Si vos résultats correspondent, vous avez correctement créé la table **appareils** à partir des données du fichier.
 
-    >                 **Conseil** : Dans cet exemple, vous avez importé une très petite quantité de données par lot à partir d’un fichier, ce qui est parfait dans le cadre de cet exercice. En réalité, vous pouvez utiliser Data Explorer pour analyser de gros volumes de données ; et étant donné que vous avez activé l’ingestion de flux, vous pouvez également configurer Data Explorer pour ingérer des données dans la table à partir d’une source de diffusion en continu comme Azure Event Hubs.
+    > **Conseil** : Dans cet exemple, vous avez importé une très petite quantité de données par lot à partir d’un fichier, ce qui est parfait dans le cadre de cet exercice. En réalité, vous pouvez utiliser Data Explorer pour analyser de gros volumes de données ; et étant donné que vous avez activé l’ingestion de flux, vous pouvez également configurer Data Explorer pour ingérer des données dans la table à partir d’une source de diffusion en continu comme Azure Event Hubs.
 
 ## Utiliser le langage de requête Kusto pour interroger la table dans Synapse Studio
 
