@@ -84,9 +84,9 @@ Un moyen simple d’ingérer des données consiste à utiliser une activité **C
 
 Maintenant que vous avez ingéré des données dans une table dans le lakehouse, vous pouvez utiliser SQL pour les interroger.
 
-1. En haut à droite de la page Lakehouse, basculez sur **Point de terminaison SQL** pour votre lakehouse.
+1. En haut à droite de la page Lakehouse, basculez vers le **point de terminaison d’analytique SQL** pour votre lakehouse.
 
-    ![Capture d’écran du menu Point de terminaison SQL.](./images/endpoint-switcher.png)
+    ![Capture d’écran du menu du point de terminaison SQL Analytics.](./images/endpoint-switcher.png)
 
 1. Dans la barre d’outils, sélectionnez **Nouvelle requête SQL**. Entrez ensuite le code SQL suivant dans l’éditeur de requête :
 
@@ -102,7 +102,7 @@ Maintenant que vous avez ingéré des données dans une table dans le lakehouse,
 
 ## Visualiser les données dans un lakehouse
 
-Les lakehouses Microsoft Fabric organisent toutes les tables dans un modèle de données, que vous pouvez utiliser pour créer des visualisations et des rapports.
+Les lakehouses Microsoft Fabric organisent toutes les tables dans un modèle de données sémantique, que vous pouvez utiliser pour créer des visualisations et des rapports.
 
 1. En bas à gauche de la page, sous le volet **Explorateur**, sélectionnez l’onglet **Modèle** pour voir le modèle de données des tables du lakehouse (dans le cas présent, il n’y a qu’une seule table).
 
