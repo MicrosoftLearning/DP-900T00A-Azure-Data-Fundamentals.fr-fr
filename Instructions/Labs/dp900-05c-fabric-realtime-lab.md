@@ -27,36 +27,23 @@ Avant d’utiliser des données dans Fabric, créez un espace de travail avec l�
 
 Maintenant que vous disposez d’un espace de travail, vous pouvez créer une base de données KQL pour stocker des données en temps réel.
 
-1. En bas à gauche du portail, passez à l’expérience **Analytique en temps réel**.
+1. En bas à gauche du portail, passez à l’expérience **Intelligence en temps réel**.
 
     ![Capture d’écran du menu du sélecteur d’expérience.](./images/fabric-real-time.png)
 
-    La page d’accueil de l’analytique en temps réel comprend des vignettes permettant de créer des ressources couramment utilisées pour l’analyse des données en temps réel
+    La page d’accueil de l’Intelligence en temps réel comprend des vignettes permettant de créer des ressources couramment utilisées pour l’analyse des données en temps réel.
 
-2. Dans la page d’accueil de l’analytique en temps réel, créez une **base de données KQL** avec le nom de votre choix.
+2. Sur la page d’accueil de l’Intelligence en temps réel, créez un **Eventhouse** avec le nom de votre choix.
 
     ![Capture d’écran de l’éditeur RTA avec Créer une base de données KQL mis en surbrillance.](./images/create-kql-db.png)
 
-   Vous verrez un écran de tableau de bord, puis sélectionnez le bouton Base de données KQL en haut.
-
-    ![Capture d’écran d’une nouvelle base de données KQL.](./images/kql-database.png)
-
-    Une fois sélectionné, la boîte de dialogue ***Nouvelle base de données KQL*** s’affiche et vous permet de donner un nom à votre base de données KQL.
-
-    ![Capture d’écran d’une nouvelle boîte de dialogue de nom de base de données KQL.](./images/name-kql-db.png)
-
-   - nommez la base de données, dans ce scénario, nommez-la : `my_kql_db`
-   - cliquez sur ***Créer***
-  
-    Au bout d’une minute environ, une nouvelle base de données KQL est créée :
-
-    Actuellement, il n’existe aucune table dans la base de données.
+    L’eventhouse est utilisé pour regrouper et gérer vos bases de données sur plusieurs projets. Une base de données KQL vide est automatiquement créée avec le nom de l’eventhouse. Les données seront ajoutées plus tard dans cet exercice.
 
 ## Créer un flux d’événements
 
 Les flux d’événements offrent un moyen évolutif et flexible d’ingérer des données en temps réel à partir d’une source de streaming.
 
-1. Dans la barre de menus à gauche, sélectionnez la page **Accueil** pour l’expérience d’analytique en temps réel.
+1. Dans la barre de menus à gauche, sélectionnez la page **Accueil** pour l’expérience Intelligence en temps réel.
 1. Dans la page d’accueil, sélectionnez la vignette pour créer un **flux d’événements** avec le nom de votre choix.
 
     Après un court laps de temps, le concepteur visuel de votre flux d’événements s’affiche.
@@ -70,11 +57,7 @@ Les flux d’événements offrent un moyen évolutif et flexible d’ingérer de
 
     ![Capture d’écran de l’aperçu des données du flux d’événements.](./images/eventstream-preview.png)
 
-1. Dans le canevas du concepteur, dans la liste **Nouvelle destination** de votre destination, sélectionnez **Base de données KQL**. Ensuite, dans le volet **Base de données KQL**, spécifiez le nom de destination **taxi-data** et sélectionnez votre espace de travail et votre base de données KQL. Sélectionnez ensuite **Créer et configurer**.
-1. Dans l’Assistant **Ingérer des données**, dans la page **Destination**, sélectionnez **Nouvelle table** et entrez le nom de la table **taxi-data**. Sélectionnez ensuite **Suivant : Source**.
-1. Dans la page **Source**, examinez le nom de connexion aux données par défaut, puis sélectionnez **Suivant : Schéma**.
-1. Dans la page **Schéma**, remplacez le **Format de données** TXT par **JSON** et affichez un aperçu pour vérifier que ce format génère plusieurs colonnes de données. Ensuite, sélectionnez **Suivant : Résumé**.
-1. Dans la page **Résumé**, attendez que l’ingestion continue soit établie, puis sélectionnez **Fermer**.
+1. Dans le canevas du concepteur, dans la liste **Nouvelle destination** de votre destination, sélectionnez **Base de données KQL**. Ensuite, dans le volet **Base de données KQL**, spécifiez le nom de destination **taxi-data** et sélectionnez votre espace de travail et votre base de données KQL. Sélectionnez **Créer nouveau** sous la table Destination et entrez le nom de table **taxi-data**. Ensuite, cliquez sur **Ajouter**.
 1. Vérifiez que votre flux d’événements terminé ressemble à ceci :
 
     ![Capture d’écran d’un flux d’événements terminé.](./images/complete-eventstream.png)
