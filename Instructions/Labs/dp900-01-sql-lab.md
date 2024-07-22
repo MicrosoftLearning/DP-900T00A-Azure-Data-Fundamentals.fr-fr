@@ -4,17 +4,17 @@ lab:
   module: Explore relational data in Azure
 ---
 
-# <a name="explore-azure-sql-database"></a>Explorer Azure SQL Database
+# Explorer Azure SQL Database
 
 Dans cet exercice, vous allez provisionner une ressource Azure SQL Database dans votre abonnement Azure, puis utiliser SQL pour interroger les tables d’une base de données relationnelle.
 
 Ce labo prend environ **15** minutes.
 
-## <a name="before-you-start"></a>Avant de commencer
+## Avant de commencer
 
 Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dans lequel vous avez un accès administratif.
 
-## <a name="provision-an-azure-sql-database-resource"></a>Provisionner une ressource Azure SQL Database
+## Provisionner une ressource Azure SQL Database
 
 1. Dans le [portail Azure](https://portal.azure.com?azure-portal=true), sélectionnez **&#65291; Créer une ressource**  en haut à gauche et recherchez *Azure SQL*. Ensuite, dans la page **Azure SQL** qui apparaît, sélectionnez **Créer**.
 
@@ -26,7 +26,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
     - **Abonnement**: Sélectionnez votre abonnement Azure.
     - **Groupe de ressources** : Créez un nouveau groupe de ressources en lui attribuant le nom de votre choix.
     - **Nom de la base de données** : *AdventureWorks*
-    -                 **Serveur** : Sélectionnez **Créer** et créez un serveur avec un nom unique dans l’un des emplacement disponibles. Utilisez l’**authentification SQL** et spécifiez votre nom en guise de nom de connexion administrateur au serveur et un mot de passe complexe comme il se doit (mémorisez le mot de passe, vous en aurez besoin plus tard).
+    - **Serveur** : Sélectionnez **Créer** et créez un serveur avec un nom unique dans l’un des emplacement disponibles. Utilisez l’**authentification SQL** et spécifiez votre nom en guise de nom de connexion administrateur au serveur et un mot de passe complexe comme il se doit (mémorisez le mot de passe, vous en aurez besoin plus tard).
     - **Vous souhaitez utiliser un pool élastique SQL ?**  : *Non*
     - **Environnement de charge de travail** : développement
     - **Calcul + stockage** : Laisser tel quel
