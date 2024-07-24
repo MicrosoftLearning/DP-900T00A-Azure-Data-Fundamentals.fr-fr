@@ -37,7 +37,7 @@ Maintenant que vous disposez d’un espace de travail, vous pouvez créer une ba
 
     ![Capture d’écran de l’éditeur RTA avec Créer une base de données KQL mis en surbrillance.](./images/create-kql-db.png)
 
-    L’eventhouse est utilisé pour regrouper et gérer vos bases de données sur plusieurs projets. Une base de données KQL vide est automatiquement créée avec le nom de l’eventhouse. Les données seront ajoutées plus tard dans cet exercice.
+    L’eventhouse est utilisé pour regrouper et gérer vos bases de données sur plusieurs projets. Une base de données KQL vide est automatiquement créée avec le nom de l’eventhouse et nous allons y ajouter des données plus loin dans cet exercice.
 
 ## Créer un flux d’événements
 

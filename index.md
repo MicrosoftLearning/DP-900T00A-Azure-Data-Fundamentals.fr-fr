@@ -4,7 +4,7 @@ permalink: index.html
 layout: home
 ---
 
-# <a name="azure-data-fundamentals-exercises"></a>Principes de base sur les données Azure
+# Principes de base sur les données Azure
 
 Ces exercices pratiques sont conçus pour accompagner le contenu des formations sur [Microsoft Learn](https://docs.microsoft.com/training/).
 
