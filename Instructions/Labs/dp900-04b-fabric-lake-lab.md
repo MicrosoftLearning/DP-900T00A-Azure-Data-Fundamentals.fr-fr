@@ -114,7 +114,7 @@ Les lakehouses Microsoft Fabric organisent toutes les tables dans un modèle de 
 
 1. Dans le menu **Fichier**, sélectionnez **Enregistrer** pour enregistrer le rapport en tant que **Rapport sur les courses en taxi** dans votre espace de travail Fabric.
 
-    Maintenant, vous pouvez fermer l’onglet du navigateur contenant le rapport pour revenir à votre lakehouse. Vous trouverez le rapport dans la page de votre espace de travail dans le portail Microsoft Fabric.
+    Vous trouverez le rapport dans la page de votre espace de travail dans le portail Microsoft Fabric.
 
 ## Nettoyer les ressources
 
