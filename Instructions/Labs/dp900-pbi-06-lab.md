@@ -10,11 +10,7 @@ Dans cet exercice, vous allez utiliser Microsoft Power BI Desktop pour créer un
 
 Ce labo prend environ **20** minutes.
 
-## Avant de commencer
-
-Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dans lequel vous avez un accès administratif.
-
-### Installer Power BI Desktop
+## Installer Power BI Desktop
 
 Si Microsoft Power BI Desktop n’est pas déjà installé sur votre ordinateur Windows, vous pouvez le télécharger et l’installer gratuitement.
 
@@ -86,7 +82,7 @@ Les trois tables de données que vous avez importées ont été chargées dans u
 
     ![Capture d’écran montrant comment renommer la hiérarchie dans Power BI.](images/rename-hierarchy.png)
 
-1. Sur le côté gauche, sélectionnez l’onglet **Vue de données**, puis dans le volet **Données**, sélectionnez la table **customers**.
+1. Sur le côté gauche, sélectionnez l’onglet **Vue de table**, puis dans le volet **Données**, sélectionnez la table **customers**.
 1. Sélectionnez l’en-tête de colonne **Ville**, puis définissez sa propriété de **Catégorie de données** sur **Ville** :
 
     ![Capture d’écran montrant comment définir une catégorie de données dans Power BI.](images/data-category.png)

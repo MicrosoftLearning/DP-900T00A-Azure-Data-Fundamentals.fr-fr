@@ -1,11 +1,3 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
 # Principes de base sur les données Microsoft Azure
 
 Ce dépôt contient les exercices pratiques de labo du cours Microsoft [DP-900  *Principes de base sur les données Microsoft Azure*](https://docs.microsoft.com/en-us/learn/certifications/courses/dp-900t00) et les [modules auto-rythmés sur Microsoft Learn](https://docs.microsoft.com/en-us/users/23110622/collections/0kjyh8rn5gdrjj/). Les laboratoires sont conçus pour accompagner les supports de cours d'apprentissage et vous permettre de vous exercer à utiliser les technologies qu'ils décrivent. 
