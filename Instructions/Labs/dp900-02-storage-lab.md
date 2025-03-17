@@ -42,7 +42,7 @@ Maintenant que vous avez un compte de stockage Azure, vous pouvez créer un cont
     *Si le fichier JSON s’affiche dans votre navigateur, enregistrez la page en tant que **product1.json**.*
 
 1. Dans la page Portail Azure de votre conteneur de stockage, sur le côté gauche, dans la section **stockage des données**, sélectionnez **Conteneurs**.
-1. Dans la page **Conteneurs**, sélectionnez **&#65291; Conteneur** et ajoutez un nouveau conteneur nommé **données** et ayant un niveau d’accès **Privé (aucun accès anonyme)** .
+1. Dans la page **Conteneurs**, sélectionnez **&#65291; Conteneur** et ajoutez un nouveau conteneur nommé **données** et ayant un niveau d’accès **Privé (aucun accès anonyme)**.
 1. Une fois le conteneur de **données** créé, vérifiez qu’il est répertorié dans la page **Conteneurs**.
 1. Dans le volet de gauche, dans la section supérieure, sélectionnez **Navigateur de stockage**. Cette page fournit une interface basée sur un navigateur que vous pouvez utiliser pour travailler avec les données de votre compte de stockage.
 1. Dans la page du navigateur de stockage, sélectionnez **Conteneurs de blobs** et vérifiez que votre conteneur de **données** est répertorié.
@@ -66,7 +66,7 @@ Maintenant que vous avez un compte de stockage Azure, vous pouvez créer un cont
 
 Le support Azure Data Lake Store Gen2 vous permet d’utiliser des dossiers hiérarchiques pour organiser et gérer l’accès aux blobs. Il vous permet également d’utiliser le Stockage Blob Azure pour héberger des systèmes de fichiers distribués pour les plateformes d’analytique Big Data courantes.
 
-1. Téléchargez le fichier JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) à partir de `https://aka.ms/product2.json` et enregistrez-le sur votre ordinateur dans le même dossier que celui dans lequel vous avez téléchargé **product1.json** précédemment. vous le téléchargerez dans le stockage Blob ultérieurement.
+1. Téléchargez le fichier JSON [product2.json](https://aka.ms/product2.json?azure-portal=true) à partir de `https://aka.ms/product2.json` et enregistrez-le sur votre ordinateur dans le même dossier que celui dans lequel vous avez téléchargé **product1.json** précédemment. Vous le téléchargerez dans le stockage Blob ultérieurement.
 1. Dans la page de votre compte de stockage sur le portail Azure, sur le côté gauche, faites défiler jusqu’à la section **Paramètres**, puis sélectionnez **Mise à niveau de Data Lake Gen2**.
 1. Dans la page **Mise à niveau de Data Lake Gen2**, développez et effectuez chaque étape pour mettre à niveau votre compte de stockage afin d’activer l’espace de noms hiérarchique et la prise en charge d’Azure Data Lake Storage Gen 2. Cette opération peut prendre un certain temps.
 1. Une fois la mise à niveau terminée, dans le volet de gauche, dans la section supérieure, sélectionnez **Navigateur de stockage** et revenez à la racine de votre conteneur d’objets blob **data**, qui contient toujours le dossier **product_data**.
@@ -85,6 +85,7 @@ Azure Files fournit un moyen de créer des partages de fichiers basés sur le cl
 
 1. Dans la page Portail Azure de votre conteneur de stockage, sur le côté gauche, dans la section **Stockage des données**, sélectionnez **Partages de fichiers**.
 1. Dans la page Partages de fichiers, sélectionnez **&#65291; Partage de fichiers** et ajoutez un nouveau partage de fichiers nommé **fichiers** et de niveau **Transaction optimisée**.
+2. Sélectionnez **Suivant : Sauvegarde >** et désactivez la sauvegarde. Sélectionnez ensuite **Passer en revue + créer** .
 1. Dans **Partages de fichiers**, ouvrez votre nouveau partage de **fichiers**.
 1. En haut de la page, sélectionnez **Connecter**. Ensuite, dans le volet **Connecter**, notez qu’il existe des onglets pour les systèmes d’exploitation communs (Windows, Linux et macOS) qui contiennent des scripts que vous pouvez exécuter pour vous connecter au dossier partagé à partir d’un ordinateur client.
 1. Fermez le volet **Connecter**, puis fermez la page **fichiers** pour revenir à la page **Partages de fichiers** de votre compte de stockage Azure.
