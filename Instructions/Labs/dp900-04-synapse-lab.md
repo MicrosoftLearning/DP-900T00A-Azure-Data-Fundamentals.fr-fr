@@ -23,7 +23,7 @@ Pour utiliser Azure Synapse Analytics, vous devez provisionner une ressource d�
     > **Conseil** : Veillez à travailler dans le répertoire contenant votre abonnement, indiqué en haut à droite sous votre ID d’utilisateur. Si ce n’est pas le cas, sélectionnez l’icône de l’utilisateur et changez d’annuaire.
 
 2. Dans le portail Azure, sur la **page d'accueil**, utilisez l’icône **&#65291; Créer une ressource** pour créer une ressource.
-3. Recherchez *Azure Synapse Analytics* et créez une ressource **Azure Synapse Analytics** avec les paramètres suivants :
+3. Recherchez `Azure Synapse Analytics` et créez une ressource **Azure Synapse Analytics** avec les paramètres suivants :
     - **Abonnement** : *votre abonnement Azure*
         - **Groupe de ressources** : *Créez un groupe de ressources avec un nom approprié, comme « synapse-rg »*
         - **Groupe de ressources géré** : *Entrez un nom approprié, par exemple « synapse-Managed-rg »*.
@@ -62,8 +62,8 @@ L’une des tâches clés que vous pouvez effectuer avec Azure Synapse Analytics
 3. À l’étape **Source**, dans la sous-étape **Jeu de données**, sélectionnez les paramètres suivants :
     - **Type de source** : Tous
     - **Connexion** : *créez une connexion et, dans le volet **Nouvelle connexion** qui s’affiche, sous l’onglet **Protocole générique**, sélectionnez **HTTP**. Ensuite, créez une connexion à un fichier de données à l’aide des paramètres suivants :*
-        - **Nom** : Produits d’AdventureWorks
-        - **Description** : Liste de produits via HTTP
+        - **Nom :** `AdventureWorks Products`
+        - **Description** : `Product list via HTTP`
         - **Se connecter via un runtime d'intégration** : AutoResolveIntegrationRuntime
         - **URL de base** : `https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv`
         - **Validation du certificat de serveur** : Activer
@@ -120,15 +120,15 @@ Maintenant que vous avez ingéré des données dans votre espace de travail, vou
 2. Dans le volet **Script SQL 1** qui s’ouvre, passez en revue le code SQL qui a été généré, et qui doit ressembler à ceci :
 
     ```SQL
-    -- This is auto-generated code
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0'
-        ) AS [result]
+   -- This is auto-generated code
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0'
+       ) AS [result]
     ```
 
     Ce code ouvre un ensemble de lignes à partir du fichier texte que vous avez importé et récupère les 100 premières lignes de données.
@@ -146,15 +146,15 @@ Maintenant que vous avez ingéré des données dans votre espace de travail, vou
 5. Notez que les résultats se composent de quatre colonnes nommées C1, C2, C3 et C4, et que la première ligne dans les résultats contient les noms des champs de données. Pour résoudre ce problème, ajoutez des paramètres HEADER_ROW = TRUE à la fonction OPENROWSET comme indiqué ici (en remplaçant *datalakexx* et *fsxx* par les noms de votre compte de stockage de lac de données et du système de fichiers), puis réexécutez la requête :
 
     ```SQL
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
     ```
 
     À présent, les résultats ressemblent à ceci :
@@ -168,16 +168,16 @@ Maintenant que vous avez ingéré des données dans votre espace de travail, vou
 6. Modifiez la requête comme suit (en remplaçant *datalakexx* et *fsxx* par les noms de votre compte de stockage Data Lake et de votre système de fichiers) :
 
     ```SQL
-    SELECT
-        Category, COUNT(*) AS ProductCount
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
-    GROUP BY Category;
+   SELECT
+       Category, COUNT(*) AS ProductCount
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
+   GROUP BY Category;
     ```
 
 7. Exécutez la requête modifiée, qui doit retourner un jeu de résultats contenant le nombre de produits dans chaque catégorie, comme ceci :
@@ -188,7 +188,7 @@ Maintenant que vous avez ingéré des données dans votre espace de travail, vou
     | Porte-vélos | 1 |
     | ... | ... |
 
-8. Dans le volet **Propriétés** de **Script SQL 1**, remplacez le **Nom** par **Nombre de produits par catégorie**. Ensuite, dans la barre d’outils, sélectionnez **Publier** pour enregistrer le script.
+8. Dans le volet **Propriétés** de **Script SQL 1**, remplacez le **Nom** par `Count Products by Category`. Ensuite, dans la barre d’outils, sélectionnez **Publier** pour enregistrer le script.
 
 9. Fermez le volet du script **Nombre de produits par catégorie**.
 
@@ -227,15 +227,15 @@ Bien que SQL soit un langage courant pour l’interrogation de jeux de données 
 6. Examinez le code dans la première (et unique) cellule du notebook, qui doit se présenter comme suit :
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    ##, header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   ##, header=True
+   )
+   display(df.limit(10))
     ```
 
-7.  Sélectionnez **&#9655; Exécuter** à gauche de la cellule de code pour l’exécuter, et attendez les résultats. La première fois que vous exécutez une cellule dans un notebook, le pool Spark démarre. Il peut falloir environ une minute avant que des résultats soient renvoyés.
+7. Sélectionnez **&#9655; Exécuter** à gauche de la cellule de code pour l’exécuter, et attendez les résultats. La première fois que vous exécutez une cellule dans un notebook, le pool Spark démarre. Il peut falloir environ une minute avant que des résultats soient renvoyés.
 
     > **Remarque** : Si une erreur se produit parce que le noyau Python n’est pas encore disponible, réexécutez la cellule.
 
@@ -251,12 +251,12 @@ Bien que SQL soit un langage courant pour l’interrogation de jeux de données 
 9. Décommentez la ligne *,header=True* (car le fichier products.csv contient les en-têtes de colonnes dans la première ligne), afin que votre code ressemble à ceci :
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    , header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   , header=True
+   )
+   display(df.limit(10))
     ```
 
 10. Réexécutez la cellule et vérifiez que les résultats ressemblent à ceci :

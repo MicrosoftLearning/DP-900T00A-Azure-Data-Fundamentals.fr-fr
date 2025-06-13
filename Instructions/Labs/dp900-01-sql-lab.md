@@ -16,7 +16,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 ## Provisionner une ressource Azure SQL Database
 
-1. Dans le [portail Azure](https://portal.azure.com?azure-portal=true), sélectionnez **&#65291; Créer une ressource**  en haut à gauche et recherchez *Azure SQL*. Ensuite, dans la page **Azure SQL** qui apparaît, sélectionnez **Créer**.
+1. Dans le [portail Azure](https://portal.azure.com?azure-portal=true), sélectionnez **&#65291; Créer une ressource** en haut à gauche et recherchez `Azure SQL`. Ensuite, dans la page **Azure SQL** qui apparaît, sélectionnez **Créer**.
 
 1. Passez en revue les options Azure SQL qui sont disponibles, puis dans la vignette **Bases de données SQL**, assurez-vous que **Base de données unique** est sélectionné, puis sélectionnez **Créer**.
 
@@ -24,8 +24,8 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 1. Entrez les valeurs suivantes dans la page **Créer une base de données SQL** et laissez toutes les autres propriétés avec leur paramètre par défaut :
     - **Abonnement**: Sélectionnez votre abonnement Azure.
-    - **Groupe de ressources** : Créez un nouveau groupe de ressources en lui attribuant le nom de votre choix.
-    - **Nom de la base de données** : *AdventureWorks*
+    - **Groupe de ressources** : créez un nouveau groupe de ressources portant le nom de votre choix.
+    - **Nom de la base de données** : `AdventureWorks`
     - **Serveur** : Sélectionnez **Créer** et créez un serveur avec un nom unique dans l’un des emplacement disponibles. Utilisez l’**authentification SQL** et spécifiez votre nom en guise de nom de connexion administrateur au serveur et un mot de passe complexe comme il se doit (mémorisez le mot de passe, vous en aurez besoin plus tard).
     - **Vous souhaitez utiliser un pool élastique SQL ?**  : *Non*
     - **Environnement de charge de travail** : développement
@@ -46,7 +46,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 1. Dans le volet situé à gauche de la page, sélectionnez **Éditeur de requête (préversion)**, puis connectez-vous avec le nom de connexion administrateur et le mot de passe que vous avez spécifiés pour votre serveur.
     
-    *Si un message d’erreur indiquant que l’adresse IP cliente n’est pas autorisée s’affiche, sélectionnez le lien **Liste d’adresses IP autorisées...** à la fin du message pour autoriser l’accès et réessayez de vous connecter (vous avez ajouté précédemment l’adresse IP cliente de votre propre ordinateur aux règles du pare-feu, mais l’éditeur de requête peut se connecter à partir d’une autre adresse en fonction de votre configuration réseau.)*
+    >**Note** : si un message d’erreur indiquant que l’adresse IP cliente n’est pas autorisée s’affiche, sélectionnez le lien **Liste d’adresses IP autorisées…** à la fin du message pour autoriser l’accès et réessayez de vous connecter (vous avez ajouté précédemment l’adresse IP cliente de votre propre ordinateur aux règles du pare-feu, mais l’éditeur de requête peut se connecter à partir d’une autre adresse en fonction de votre configuration réseau).
     
     L’éditeur de requête ressemble à ceci :
     
@@ -57,7 +57,7 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 1. Dans le volet **Requête 1**, entrez le code SQL suivant :
 
     ```sql
-    SELECT * FROM SalesLT.Product;
+   SELECT * FROM SalesLT.Product;
     ```
 
 1. Sélectionnez **&#9655; Exécuter** au-dessus de la requête pour l’exécuter et afficher les résultats, lesquels doivent inclure toutes les colonnes de toutes les lignes de la table **SalesLT.Product**, comme illustré ici :
@@ -67,18 +67,18 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 1. Remplacez l’instruction SELECT par le code suivant, puis sélectionnez **&#9655; Exécuter** pour exécuter la nouvelle requête et voir les résultats (qui incluent uniquement les colonnes **ProductID**, **Name**, **ListPrice** et **ProductCategoryID**) :
 
     ```sql
-    SELECT ProductID, Name, ListPrice, ProductCategoryID
-    FROM SalesLT.Product;
+   SELECT ProductID, Name, ListPrice, ProductCategoryID
+   FROM SalesLT.Product;
     ```
 
 1. À présent, essayez la requête suivante, qui utilise une instruction JOIN pour obtenir le nom de la catégorie de la table **SalesLT.ProductCategory** :
 
     ```sql
-    SELECT p.ProductID, p.Name AS ProductName,
-            c.Name AS Category, p.ListPrice
-    FROM SalesLT.Product AS p
-    JOIN [SalesLT].[ProductCategory] AS c
-        ON p.ProductCategoryID = c.ProductCategoryID;
+   SELECT p.ProductID, p.Name AS ProductName,
+           c.Name AS Category, p.ListPrice
+   FROM SalesLT.Product AS p
+   JOIN [SalesLT].[ProductCategory] AS c
+       ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
 1. Fermez le volet de l’éditeur de requête, en ignorant vos modifications.
