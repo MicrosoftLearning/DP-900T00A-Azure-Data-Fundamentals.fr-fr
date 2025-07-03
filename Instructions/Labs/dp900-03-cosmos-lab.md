@@ -17,9 +17,10 @@ Vous avez besoin d’un [abonnement Azure](https://azure.microsoft.com/free) dan
 
 Pour utiliser Cosmos DB, vous devez provisionner un compte Cosmos DB dans votre abonnement Azure. Dans cet exercice, vous allez provisionner un compte Cosmos DB qui utilise Azure Cosmos DB for NoSQL.
 
-1. Dans le portail Azure, sélectionnez **+ Créer une ressource** en haut à gauche, puis recherchez *Azure Cosmos DB*.  Dans les résultats, sélectionnez **Azure Cosmos DB**, puis sélectionnez **Créer**.
+1. Dans le portail Azure, sélectionnez **+ Créer une ressource** en haut à gauche, puis recherchez `Azure Cosmos DB`.  Dans les résultats, sélectionnez **Azure Cosmos DB**, puis sélectionnez **Créer**.
 1. Dans la vignette **Azure Cosmos DB for NoSQL**, sélectionnez **Créer**.
 1. Entrez les détails suivants, puis sélectionnez **Vérifier + créer** :
+    - **Type de charge de travail** : formation
     - **Abonnement** : Si vous utilisez un bac à sable, sélectionnez *Abonnement concierge*. Sinon, sélectionnez votre abonnement Azure.
     - **Groupe de ressources** : Si vous utilisez un bac à sable, sélectionnez le groupe de ressources existant (qui a un nom comme *learn-xxxx...* ). Sinon, créez un groupe de ressources avec le nom de votre choix.
     - **Nom du compte** : Entrer un nom unique
@@ -47,14 +48,14 @@ Pour utiliser Cosmos DB, vous devez provisionner un compte Cosmos DB dans votr
 1. Modifiez le fichier JSON du nouvel élément comme suit, puis sélectionnez **Enregistrer**.
 
     ```json
-    {
-        "name": "Road Helmet,45",
-        "id": "123456789",
-        "categoryID": "123456789",
-        "SKU": "AB-1234-56",
-        "description": "The product called \"Road Helmet,45\" ",
-        "price": 48.74
-    }
+   {
+       "name": "Road Helmet,45",
+       "id": "123456789",
+       "categoryID": "123456789",
+       "SKU": "AB-1234-56",
+       "description": "The product called \"Road Helmet,45\" ",
+       "price": 48.74
+   }
     ```
 
 1. Après avoir enregistré le nouvel élément, notez que des propriétés de métadonnées supplémentaires sont ajoutées automatiquement.
@@ -67,9 +68,9 @@ Pour utiliser Cosmos DB, vous devez provisionner un compte Cosmos DB dans votr
 1. Modifiez la requête de la manière suivante :
 
     ```sql
-    SELECT *
-    FROM c
-    WHERE CONTAINS(c.name,"Helmet")
+   SELECT *
+   FROM c
+   WHERE CONTAINS(c.name,"Helmet")
     ```
 
 1. Utilisez le bouton **Exécuter la requête** pour exécuter la requête révisée et passer en revue les résultats, notamment des entités JSON pour tous les éléments avec un champ **name** contenant le texte « Helmet ».
